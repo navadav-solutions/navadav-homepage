@@ -5,9 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Si tu repositorio no está en la raíz, descomenta y ajusta el basePath
-  // basePath: "/navadav",
-  // assetPrefix: "/navadav",
+  basePath: "/navadav",
+  assetPrefix: "/navadav",
 };
 
 export default nextConfig;
