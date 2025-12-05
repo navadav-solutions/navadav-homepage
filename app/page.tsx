@@ -3,13 +3,16 @@ import MainCard from "./components/MainCard/MainCard";
 import Layout from "./layout/Layout";
 import Image from "next/image";
 
+// En desarrollo, basePath es vacío. En producción (GitHub Pages), es "/navadav"
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Home() {
   return (
     <Layout>
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: "url(/mainHeroImage.png)",
+          backgroundImage: `url(${basePath}/mainHeroImage.png)`,
         }}
       >
         <div className="w-full md:w-[80%] mx-auto h-full flex items-center justify-center">
@@ -64,7 +67,7 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc="/statsImage.png"
+          imageSrc={`${basePath}/statsImage.png`}
           imageAlt="Main Card Image"
           icon={
             <Image
@@ -81,7 +84,7 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc="/apiImage.png"
+          imageSrc={`${basePath}/apiImage.png`}
           imageAlt="Main Card Image"
           icon={
             <Image
@@ -99,7 +102,7 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto py-12 text-center">
         <MainCard
-          imageSrc="/refactorImage.png"
+          imageSrc={`${basePath}/refactorImage.png`}
           imageAlt="Main Card Image"
           icon={
             <Image
