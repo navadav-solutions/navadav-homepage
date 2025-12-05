@@ -36,6 +36,13 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
         run: npm run build
 
+      - name: Remove CNAME file if exists
+        run: |
+          if [ -f "./out/CNAME" ]; then
+            rm ./out/CNAME
+            echo "CNAME file removed"
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
