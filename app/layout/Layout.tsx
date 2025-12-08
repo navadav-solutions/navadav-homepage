@@ -3,9 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-// En desarrollo, basePath es vacío. En producción (GitHub Pages), es "/navadav"
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { getAssetPath } from "../utils/assets";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +20,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="w-full">
       <nav className="w-[90%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center p-4 absolute top-0 left-1/2 transform -translate-x-1/2 z-50">
         <Image
-          src={`${basePath}/mainLogo.svg`}
+          src={getAssetPath("/mainLogo.svg")}
           alt="logo"
           width={100}
           height={80}
@@ -82,7 +80,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-col p-6 h-full">
               <div className="flex justify-between items-center mb-8">
                 <Image
-                  src={`${basePath}/mainLogo.svg`}
+                  src={getAssetPath("/mainLogo.svg")}
                   alt="logo"
                   width={100}
                   height={80}
@@ -141,7 +139,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       >
         <div className="w-[90%] mx-auto text-white py-24">
           <Image
-            src={`${basePath}/mainLogo.svg`}
+            src={getAssetPath("/mainLogo.svg")}
             alt="logo"
             width={100}
             height={80}

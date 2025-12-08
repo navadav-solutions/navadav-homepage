@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-// En desarrollo, basePath es vacío. En producción (GitHub Pages), es "/navadav"
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { getAssetPath } from "../../utils/assets";
 
 const ContactForm = () => {
   return (
@@ -62,7 +60,7 @@ const ContactForm = () => {
                   }}>
                   Send
                   <Image
-                    src={`${basePath}/arrowRight.svg`}
+                    src={getAssetPath("/arrowRight.svg")}
                     alt="Send Icon"
                     width={20}
                     height={20}
@@ -73,7 +71,7 @@ const ContactForm = () => {
               {/* Imagen/Productos - Lado Derecho */}
               <div className="rounded-[50px] relative overflow-hidden">
                 <Image
-                  src="/formImage.png"
+                  src={getAssetPath("/formImage.png")}
                   alt="Contact Products"
                   width={400}
                   height={400}

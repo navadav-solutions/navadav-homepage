@@ -2,9 +2,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import MainCard from "./components/MainCard/MainCard";
 import Layout from "./layout/Layout";
 import Image from "next/image";
-
-// En desarrollo, basePath es vacío. En producción (GitHub Pages), es "/navadav"
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { getAssetPath } from "./utils/assets";
 
 export default function Home() {
   return (
@@ -12,7 +10,7 @@ export default function Home() {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${basePath}/mainHeroImage.png)`,
+          backgroundImage: `url(${getAssetPath("/mainHeroImage.png")})`,
         }}
       >
         <div className="w-full md:w-[80%] mx-auto h-full flex items-center justify-center">
@@ -45,7 +43,7 @@ export default function Home() {
             >
               Agenda cita
               <Image
-                src={`${basePath}/arrowRight.svg`}
+                src={getAssetPath("/arrowRight.svg")}
                 alt="Arrow Right"
                 width={20}
                 height={20}
@@ -67,11 +65,11 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={`${basePath}/statsImage.png`}
+          imageSrc={getAssetPath("/statsImage.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={`${basePath}/iconService.svg`}
+              src={getAssetPath("/iconService.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -84,11 +82,11 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={`${basePath}/apiImage.png`}
+          imageSrc={getAssetPath("/apiImage.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={`${basePath}/iconApi.svg`}
+              src={getAssetPath("/iconApi.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -102,11 +100,11 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto py-12 text-center">
         <MainCard
-          imageSrc={`${basePath}/refactorImage.png`}
+          imageSrc={getAssetPath("/refactorImage.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={`${basePath}/iconRefactor.svg`}
+              src={getAssetPath("/iconRefactor.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
