@@ -130,7 +130,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </>
       )}
+
       {children}
+
       <footer
         className="text-center text-sm text-gray-500"
         style={{
@@ -145,12 +147,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             height={80}
             className="w-70 z-10 relative mb-4"
           />
-          <div className="flex items-start justify-between">
-            <p className="text-[22px] font-weight-[700] text-white text-left">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-0">
+            <p className="text-[22px] font-[700] text-white text-left">
               Your Trusted Global Partner for <br /> Innovative Mobile Solutions
               and Digital <br /> Transformation
             </p>
-            <div className="flex flex-col items-start justify-center">
+            <div className="flex flex-col items-start justify-center lg:font-weight-[400] font-[700] text-[#D3C7D2]">
               <p className="text-[24px] font-bold text-left mb-[40px]">
                 Get in touch
               </p>
@@ -181,14 +183,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </li>
               </ul>
             </div>
+
             <div className="flex flex-col items-start justify-center">
               <p className="text-[24px] font-bold text-left mb-[40px]">Links</p>
-              <ul className="flex flex-col items-start justify-center gap-[24px]">
+              <ul className="flex flex-col items-start justify-center gap-[24px] text-[#D3C7D2] lg:font-weight-[400] font-[700]">
                 <li>
-                  <Link
-                    href="/servicios"
-                    className="text-[16px] font-weight-[400] text-left"
-                  >
+                  <Link href="/servicios" className="text-[16px]   text-left">
                     Services
                   </Link>
                 </li>
@@ -225,6 +225,51 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </Link>
                 </li>
               </ul>
+            </div>
+          </div>
+          
+          <div className="flex flex-col lg:flex-row  items-start lg:items-center gap-12 lg:gap-72 mt-12 lg:mt-0">
+            <p className="text-[18px] font-weight-[700] text-white text-left">
+              Copyright Appdevshop all Rights Reserved
+            </p>
+
+            <div className="flex items-center justify-center gap-4">
+              <a
+                href="https://www.facebook.com/queueunderstop/"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                <Image
+                  src={getAssetPath("/iconFacebook.svg")}
+                  alt="facebook"
+                  width={20}
+                  height={20}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/queueunderstop/"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                <Image
+                  src={getAssetPath("/iconInstagram.svg")}
+                  alt="instagram"
+                  width={20}
+                  height={20}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/queueunderstop/"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                <Image
+                  src={getAssetPath("/iconIn.svg")}
+                  alt="linkedin"
+                  width={20}
+                  height={20}
+                />
+              </a>
             </div>
           </div>
         </div>
