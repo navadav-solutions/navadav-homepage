@@ -62,6 +62,7 @@ export default function Home() {
            la experiencia de tus clientes.
         </p>
       </section>
+      
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
