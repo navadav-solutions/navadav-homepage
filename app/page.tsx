@@ -45,7 +45,7 @@ export default function Home() {
             >
               Agenda cita
               <Image
-                src="/arrowRight.svg"
+                src={`${basePath}/arrowRight.svg`}
                 alt="Arrow Right"
                 width={20}
                 height={20}
@@ -71,7 +71,7 @@ export default function Home() {
           imageAlt="Main Card Image"
           icon={
             <Image
-              src="/iconService.svg"
+              src={`${basePath}/iconService.svg`}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -88,7 +88,7 @@ export default function Home() {
           imageAlt="Main Card Image"
           icon={
             <Image
-              src="/iconApi.svg"
+              src={`${basePath}/iconApi.svg`}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -106,7 +106,7 @@ export default function Home() {
           imageAlt="Main Card Image"
           icon={
             <Image
-              src="/iconRefactor.svg"
+              src={`${basePath}/iconRefactor.svg`}
               alt="Main Card Icon"
               width={100}
               height={100}
