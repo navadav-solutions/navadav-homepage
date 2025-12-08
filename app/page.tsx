@@ -62,7 +62,7 @@ export default function Home() {
            la experiencia de tus clientes.
         </p>
       </section>
-      
+
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
@@ -70,7 +70,7 @@ export default function Home() {
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconService.svg")}
+              src={getAssetPath("/iconS.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
