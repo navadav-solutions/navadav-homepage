@@ -7,13 +7,23 @@ import { getAssetPath } from "../utils/assets";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleToggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      setIsMenuOpen(true);
+      // Pequeño delay para que la animación funcione correctamente
+      setTimeout(() => setIsAnimating(true), 10);
+    } else {
+      setIsAnimating(false);
+      // Esperar a que termine la animación antes de ocultar
+      setTimeout(() => setIsMenuOpen(false), 300);
+    }
   };
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(false);
+    setIsAnimating(false);
+    setTimeout(() => setIsMenuOpen(false), 300);
   };
 
   return (
@@ -72,11 +82,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <>
+          {/* Overlay con animación de fade */}
           <div
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300 ease-in-out ${
+              isAnimating ? "opacity-100" : "opacity-0"
+            }`}
             onClick={handleCloseMenu}
           />
-          <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
+          {/* Panel del menú con animación de slide */}
+          <div
+            className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-xl z-50 lg:hidden transform transition-transform duration-300 ease-out ${
+              isAnimating ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
             <div className="flex flex-col p-6 h-full">
               <div className="flex justify-between items-center mb-8">
                 <Image
@@ -84,43 +102,122 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   alt="logo"
                   width={100}
                   height={80}
-                  className="w-35 h-12"
+                  className={`w-35 h-12 transition-opacity duration-300 delay-100 ${
+                    isAnimating ? "opacity-100" : "opacity-0"
+                  }`}
                 />
                 <button
                   onClick={handleCloseMenu}
-                  className="text-gray-600 hover:text-gray-800 text-2xl"
+                  className={`text-gray-600 hover:text-gray-800 text-2xl transition-all duration-200 hover:rotate-90 ${
+                    isAnimating ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                  }`}
                 >
                   ×
                 </button>
               </div>
               <nav className="flex flex-col gap-4">
-                <Link href="/" onClick={handleCloseMenu}>
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800">
+                <Link
+                  href="/"
+                  onClick={handleCloseMenu}
+                  className={`transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "150ms" : "0ms",
+                  }}
+                >
+                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
                     Home
                   </button>
                 </Link>
-                <Link href="/servicios" onClick={handleCloseMenu}>
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800">
+                <Link
+                  href="/servicios"
+                  onClick={handleCloseMenu}
+                  className={`transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "200ms" : "0ms",
+                  }}
+                >
+                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
                     Servicios
                   </button>
                 </Link>
-                <Link href="/portafolio" onClick={handleCloseMenu}>
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800">
+                <Link
+                  href="/portafolio"
+                  onClick={handleCloseMenu}
+                  className={`transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "250ms" : "0ms",
+                  }}
+                >
+                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
                     Portafolio
                   </button>
                 </Link>
-                <Link href="/blog" onClick={handleCloseMenu}>
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800">
+                <Link
+                  href="/blog"
+                  onClick={handleCloseMenu}
+                  className={`transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "300ms" : "0ms",
+                  }}
+                >
+                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
                     Blog
                   </button>
                 </Link>
-                <div className="border-t border-gray-200 my-4" />
-                <Link href="/careers" onClick={handleCloseMenu}>
+                <div
+                  className={`border-t border-gray-200 my-4 transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 scale-x-100"
+                      : "opacity-0 scale-x-0"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "350ms" : "0ms",
+                  }}
+                />
+                <Link
+                  href="/careers"
+                  onClick={handleCloseMenu}
+                  className={`transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "400ms" : "0ms",
+                  }}
+                >
                   <button className="w-full text-left px-4 py-2 rounded-[16px] bg-white/20 backdrop-blur-md border border-gray-300 text-[var(--primary-color-text)] font-semibold hover:bg-gray-100 transition-all cursor-pointer">
                     Careers
                   </button>
                 </Link>
-                <Link href="/contact" onClick={handleCloseMenu}>
+                <Link
+                  href="/contact"
+                  onClick={handleCloseMenu}
+                  className={`transition-all duration-300 ${
+                    isAnimating
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isAnimating ? "450ms" : "0ms",
+                  }}
+                >
                   <button className="w-full text-left px-4 py-2 rounded-[16px] bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-all cursor-pointer">
                     Contact us
                   </button>
