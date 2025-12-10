@@ -3,11 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { getAssetPath } from "../utils/assets";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const pathname = usePathname();
 
   const handleToggleMenu = () => {
     if (!isMenuOpen) {
@@ -39,34 +41,38 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-4 z-10 relative">
           <Link href="/">
-            <button className="px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer">
+            <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === "/" ? "text-[#0743D7]" : ""}`}>
               Home
             </button>
           </Link>
           <Link href="/servicios">
-            <button className="px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer">
+            <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === "/servicios" ? "text-[#0743D7]" : ""}`}>
               Servicios
             </button>
           </Link>
           <Link href="/portafolio">
-            <button className="px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer">
+            <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === "/portafolio" ? "text-[#0743D7]" : ""}`}>
               Portafolio
             </button>
           </Link>
           <Link href="/blog">
-            <button className="px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer">
+            <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === "/blog" ? "text-[#0743D7]" : ""}`}>
               Blog
             </button>
           </Link>
         </div>
         <div className="hidden lg:flex gap-4 z-10 relative">
-          <Link href="/careers">
-            <button className="py-[12px] px-[16px] rounded-[16px] bg-white/20 backdrop-blur-md border border-white/30 text-[var(--primary-color-text)] font-semibold hover:bg-white/50 transition-all cursor-pointer shadow-sm">
-              Careers
-            </button>
-          </Link>
+          {
+            !isHome && ( 
+              <Link href="/careers">
+                <button className="py-[12px] px-[16px] rounded-[16px] bg-white/20 backdrop-blur-md border border-white/30 text-[var(--primary-color-text)] font-semibold hover:bg-white/50 transition-all cursor-pointer shadow-sm">
+                  Careers
+                </button>
+              </Link>
+            )
+          }
           <Link href="/contact">
-            <button className="bg-white rounded-[16px] text-[var(--secondary-color-text)] p-[12px] transition-all cursor-pointer shadow-sm">
+            <button className="bg-white rounded-[16px] text-[#032F9D] p-[12px] transition-all cursor-pointer shadow-sm">
               Contact us
             </button>
           </Link>
@@ -128,7 +134,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     transitionDelay: isAnimating ? "150ms" : "0ms",
                   }}
                 >
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
+                  <button className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${pathname === "/" ? "text-[#0743D7]" : "text-gray-800"}`}>
                     Home
                   </button>
                 </Link>
@@ -144,7 +150,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     transitionDelay: isAnimating ? "200ms" : "0ms",
                   }}
                 >
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
+                  <button className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${pathname === "/servicios" ? "text-[#0743D7]" : "text-gray-800"}`}>
                     Servicios
                   </button>
                 </Link>
@@ -160,7 +166,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     transitionDelay: isAnimating ? "250ms" : "0ms",
                   }}
                 >
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
+                  <button className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${pathname === "/portafolio" ? "text-[#0743D7]" : "text-gray-800"}`}>
                     Portafolio
                   </button>
                 </Link>
@@ -176,7 +182,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     transitionDelay: isAnimating ? "300ms" : "0ms",
                   }}
                 >
-                  <button className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer text-gray-800 transition-colors duration-200">
+                  <button className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${pathname === "/blog" ? "text-[#0743D7]" : "text-gray-800"}`}>
                     Blog
                   </button>
                 </Link>
