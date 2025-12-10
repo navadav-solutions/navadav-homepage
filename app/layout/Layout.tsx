@@ -9,6 +9,7 @@ import { getAssetPath } from "../utils/assets";
 const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
 
   const handleToggleMenu = () => {
@@ -45,11 +46,49 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
               Home
             </button>
           </Link>
-          <Link href="/servicios">
-            <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === "/servicios" ? "text-[#0743D7]" : ""}`}>
+          {/* Servicios Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button 
+              className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer flex items-center gap-1 ${pathname.startsWith("/servicios") ? "text-[#0743D7]" : ""}`}
+            >
               Servicios
+              <svg 
+                className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
-          </Link>
+            
+            {/* Dropdown Menu */}
+            <div 
+              className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-200 ${
+                isServicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+              }`}
+            >
+              <Link href="/servicios/soluciones-a-medida" onClick={() => setIsServicesOpen(false)}>
+                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <p className="font-semibold text-gray-800">Soluciones a medida</p>
+                </div>
+              </Link>
+              <Link href="/servicios/diseno" onClick={() => setIsServicesOpen(false)}>
+                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <p className="font-semibold text-gray-800">Diseño</p>
+                </div>
+              </Link>
+              <Link href="/servicios/inteligencia-de-negocios" onClick={() => setIsServicesOpen(false)}>
+                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <p className="font-semibold text-gray-800">Inteligencia de negocios</p>
+                </div>
+              </Link>
+            </div>
+          </div>
           <Link href="/portafolio">
             <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === "/portafolio" ? "text-[#0743D7]" : ""}`}>
               Portafolio

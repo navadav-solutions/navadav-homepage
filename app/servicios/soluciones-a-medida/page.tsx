@@ -1,11 +1,11 @@
 
-import ContactForm from "../components/ContactForm/ContactForm";
-import MainCard from "../components/MainCard/MainCard";
-import Layout from "../layout/Layout";
+import ContactForm from "../../components/ContactForm/ContactForm";
+import MainCard from "../../components/MainCard/MainCard";
+import Layout from "../../layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "../utils/assets";
+import { getAssetPath } from "../../utils/assets";
 
-const Services = () => {
+const SolucionesAMedida = () => {
   return (
     <Layout>
       <section
@@ -160,4 +160,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default SolucionesAMedida

@@ -36,7 +36,7 @@ const CardServices = ({ title, imageSrc, listServices }: CardServicesProps) => {
               <div className='flex flex-row items-center justify-between gap-2'>
                 <span className='text-[24px] font-[500] text-[#2B2B40]'>{service.title}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M6 16H26M26 16L18.5 8M26 16L18.5 24" stroke="#2B2B40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6 16H26M26 16L18.5 8M26 16L18.5 24" stroke="#2B2B40" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
             </li>
