@@ -7,7 +7,7 @@ import CardStepByStep from "./components/CardStepByStep/CardSteoByStep";
 import CardServices from "./components/CardServices/CardServices";
 import TestimonialCard from "./components/TestimonialCard/TestimonialCard";
 
-const listServices = [
+const listServicesUxUi = [
   {
     title: "Diseño web",
     link: "https://www.google.com",
@@ -41,6 +41,34 @@ const listServicesDevelopment = [
   },
   {
     title: "MS 365 Consulting",
+    link: "https://www.google.com",
+  },
+
+]
+
+const listServicesAutomation = [
+  {
+    title: "Custom software",
+    link: "https://www.google.com",
+  },
+  {
+    title: "Business Intelligence Consulting",
+    link: "https://www.google.com",
+  },
+  {
+    title: "Mobile app design",
+    link: "https://www.google.com",
+  },
+  {
+    title: "MS 365 Consulting",
+    link: "https://www.google.com",
+  },
+
+]
+
+const listServicesBusinessIntelligence = [
+  {
+    title: "Consultoría en Inteligencia de Negocios",
     link: "https://www.google.com",
   },
 ]
@@ -202,21 +230,33 @@ export default function Home() {
           From strategy to execution, our services are designed to solve real problems and grow your business.
         </p>
       </section>
-      <div className="relative">
-        <section className="w-[80%] flex flex-col lg:flex-row items-start justify-start gap-10 mx-auto py-16 text-center flex flex-col justify-center items-center">
-          <div className="flex-1">
-            <CardServices
-              title="Diseño"
-              imageSrc={getAssetPath("/disenoServiceImage.png")}
-              listServices={listServices}
-            />
-          </div>
 
-          <div className="flex-1">
+      <div className="relative">
+        <section className="lg:w-[80%] w-[90%] flex flex-col gap-5 mx-auto py-16 text-center flex flex-col justify-center items-center">
+
+          <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4">
             <CardServices
               title="Desarrollo"
               imageSrc={getAssetPath("/desarrolloServiceImage.png")}
               listServices={listServicesDevelopment}
+            />
+            <CardServices
+              title="Inteligencia de negocios"
+              imageSrc={getAssetPath("/desarrolloServiceImage.png")}
+              listServices={listServicesDevelopment}
+            />
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4 ">
+            <CardServices
+              title="Automatización"
+              imageSrc={getAssetPath("/desarrolloServiceImage.png")}
+              listServices={listServicesAutomation}
+            />
+            <CardServices
+              title="Diseño"
+              imageSrc={getAssetPath("/disenoServiceImage.png")}
+              listServices={listServicesUxUi}
             />
           </div>
         </section>
@@ -229,16 +269,16 @@ export default function Home() {
         />
       </div>
 
-      <section className="w-[80%] mx-auto py-[45px] text-center flex flex-row justify-between items-center">
-        <h2 className="text-[32px] lg:text-[56px] font-bold text-[#2B2B40] mb-6">
+      <section className="w-[80%] mx-auto py-[45px] lg:text-center text-start flex flex-row justify-between items-center">
+        <h2 className="text-[18px] lg:text-[56px] font-bold text-[#2B2B40] lg:mb-6 mb-0">
           Historias que Transforman
         </h2>
-        <button className="bg-white rounded-[16px] font-bold text-[#032F9D] p-[12px] transition-all cursor-pointer shadow-sm">
+        <button className="bg-white w-[40%] lg:w-auto rounded-[16px] font-bold text-[#032F9D] lg:p-[12px] p-[8px] transition-all cursor-pointer shadow-sm">
           View all
         </button>
       </section>
 
-      <section className="w-[80%] mx-auto pb-[45px] text-center flex flex-row gap-4 justify-between items-center">
+      <section className="w-[80%] mx-auto pb-[45px] text-center flex lg:flex-row flex-col gap-4 justify-between items-center">
         <TestimonialCard
           imageSrc={getAssetPath("/testimonial1.png")}
           name="How to write content about your photographs"
@@ -316,7 +356,7 @@ export default function Home() {
       </section>
 
       */}
-      <ContactForm /> 
+      <ContactForm />
     </Layout>
   );
 }
