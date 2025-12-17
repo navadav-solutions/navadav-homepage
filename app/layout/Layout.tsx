@@ -35,7 +35,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
       <nav className="w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 absolute top-0 left-1/2 transform -translate-x-1/2 z-50">
         <div className="relative w-[200px] h-[auto] z-10 relative">
           <Image
-            src={getAssetPath("/logoFinal.svg")}
+            src={getAssetPath("/logos/final.svg")}
             alt="logo"
             width={200}
             height={0}
@@ -151,7 +151,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
             <div className="flex flex-col p-6 h-full">
               <div className="flex justify-between items-center mb-8">
                 <Image
-                  src={getAssetPath("/mainLogo.svg")}
+                  src={getAssetPath("/logos/main.svg")}
                   alt="logo"
                   width={100}
                   height={80}
@@ -331,7 +331,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
       >
         <div className="w-[90%] mx-auto text-white py-24">
           <Image
-            src={getAssetPath("/logoFinal.svg")}
+            src={getAssetPath("/logos/final.svg")}
             alt="logo"
             width={200}
             height={0}
@@ -430,7 +430,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                 rel={"noreferrer"}
               >
                 <Image
-                  src={getAssetPath("/iconFacebook.svg")}
+                  src={getAssetPath("/icons/social/facebook.svg")}
                   alt="facebook"
                   width={20}
                   height={20}
@@ -442,7 +442,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                 rel={"noreferrer"}
               >
                 <Image
-                  src={getAssetPath("/iconInstagram.svg")}
+                  src={getAssetPath("/icons/social/instagram.svg")}
                   alt="instagram"
                   width={20}
                   height={20}
@@ -454,7 +454,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                 rel={"noreferrer"}
               >
                 <Image
-                  src={getAssetPath("/iconIn.svg")}
+                  src={getAssetPath("/icons/social/linkedin.svg")}
                   alt="linkedin"
                   width={20}
                   height={20}

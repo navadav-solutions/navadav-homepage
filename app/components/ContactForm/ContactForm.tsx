@@ -61,7 +61,7 @@ const ContactForm = () => {
                     }}>
                     Send
                     <Image
-                      src={getAssetPath("/arrowRight.svg")}
+                      src={getAssetPath("/icons/ui/arrow-right.svg")}
                       alt="Send Icon"
                       width={20}
                       height={20}
@@ -74,7 +74,7 @@ const ContactForm = () => {
               {/* Imagen/Productos - Lado Derecho */}
               <div className="rounded-[50px] relative overflow-hidden">
                 <Image
-                  src={getAssetPath("/formImage.png")}
+                  src={getAssetPath("/images/misc/form.png")}
                   alt="Contact Products"
                   width={400}
                   height={400}

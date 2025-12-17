@@ -79,7 +79,7 @@ export default function Home() {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${getAssetPath("/ejemplo1.png")})`,
+          backgroundImage: `url(${getAssetPath("/images/misc/ejemplo1.png")})`,
         }}
       >
         <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">
@@ -138,7 +138,7 @@ export default function Home() {
             >
               Agenda cita
               <Image
-                src={getAssetPath("/arrowRight.svg")}
+                src={getAssetPath("/icons/ui/arrow-right.svg")}
                 alt="Arrow Right"
                 width={20}
                 height={20}
@@ -152,7 +152,7 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row gap-10 w-[90%] bg-[#F1F2F9] mx-auto rounded-[24px] lg:p-[64px] p-[24px]">
         <div className="flex-1w-[465px] max-w-[465px] max-h-[392px] h-[392px]">
           <Image
-            src={getAssetPath("/testimonialImage.png")}
+            src={getAssetPath("/images/testimonials/background.png")}
             alt="Home Layout"
             width={400}
             height={400}
@@ -161,7 +161,7 @@ export default function Home() {
 
         <div className="flex-1 flex flex-col items-start justify-start">
           <div>
-            <Image src={getAssetPath("/quoteIcon.svg")} alt="Quote Icon" width={115} height={115} className="lg:w-[115px] w-[80px] h-[80px] lg:h-auto lg:w-auto" />
+            <Image src={getAssetPath("/icons/ui/quote.svg")} alt="Quote Icon" width={115} height={115} className="lg:w-[115px] w-[80px] h-[80px] lg:h-auto lg:w-auto" />
           </div>
           <p className="lg:text-[32px] text-[24px] font-[500] lg:w-[80%] w-[100%] text-[#53535B] lg:mb-0 mb-4" >
             We love navadav! Our designers were using it for their projects, so clients already knew what navadav was and how to use it.
@@ -170,7 +170,7 @@ export default function Home() {
             <p className="lg:text-[16px] text-[14px] font-[400] text-gray-600">
               <b>Jenn Wilson</b>  Co-founder de
             </p>
-            <Image src={getAssetPath("/amazonBadge.png")} alt="Amazon Badge" width={100} height={100} className="lg:w-[100px] w-[80px] lg:h-auto lg:w-auto" />
+            <Image src={getAssetPath("/images/misc/amazon-badge.png")} alt="Amazon Badge" width={100} height={100} className="lg:w-[100px] w-[80px] lg:h-auto lg:w-auto" />
 
           </div>
         </div>
@@ -189,24 +189,24 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4">
           <div className="flex flex-col items-start justify-start lg:gap-10 gap-4 ">
             <CardStepByStep
-              imageSrc={getAssetPath("/diagnosticoIcon.svg")}
+              imageSrc={getAssetPath("/icons/steps/diagnostico.svg")}
               title="Diagnóstico Inicial"
               description="Profundizamos en cómo funciona tu negocio, identificando desafíos y oportunidades clave para trazar la ruta de mejora."
             />
             <CardStepByStep
-              imageSrc={getAssetPath("/retroalimentacionIcon.svg")}
+              imageSrc={getAssetPath("/icons/steps/retroalimentacion.svg")}
               title="Demo funcional"
               description="Mostramos un primer avance práctico de la solución, para que visualices rápidamente cómo encaja con tus necesidades."
             />
           </div>
           <div className="flex flex-col items-start justify-start lg:gap-10 gap-4 lg:mt-20 mt-0">
             <CardStepByStep
-              imageSrc={getAssetPath("/demoIcon.svg")}
+              imageSrc={getAssetPath("/icons/steps/demo.svg")}
               title="Retroalimentación Activa"
               description="Recogemos tus impresiones y las de tu equipo para pulir la propuesta y asegurar que responde al 100% a tus expectativas."
             />
             <CardStepByStep
-              imageSrc={getAssetPath("/diagnostico2Icon.svg")}
+              imageSrc={getAssetPath("/icons/steps/diagnostico2.svg")}
               title="Despliegue Estratégico"
               description="Lanzamos la solución en tu día a día, acompañándote de cerca para que impacte de forma inmediata en tus objetivos y crezca junto a ti."
             />
@@ -217,7 +217,7 @@ export default function Home() {
 
       <section className="w-[90%] mx-auto py-16 text-center flex flex-col justify-center items-center relative">
         <Image
-          src={getAssetPath("/elementoAbstracto.png")}
+          src={getAssetPath("/images/hero/elemento-abstracto.png")}
           alt="Elemento Abstracto"
           width={200}
           height={100}
@@ -237,12 +237,12 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4">
             <CardServices
               title="Desarrollo"
-              imageSrc={getAssetPath("/desarrolloServiceImage.png")}
+              imageSrc={getAssetPath("/images/services/desarrollo.png")}
               listServices={listServicesDevelopment}
             />
             <CardServices
               title="Inteligencia de negocios"
-              imageSrc={getAssetPath("/desarrolloServiceImage.png")}
+              imageSrc={getAssetPath("/images/services/desarrollo.png")}
               listServices={listServicesDevelopment}
             />
           </div>
@@ -250,18 +250,18 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4 ">
             <CardServices
               title="Automatización"
-              imageSrc={getAssetPath("/desarrolloServiceImage.png")}
+              imageSrc={getAssetPath("/images/services/desarrollo.png")}
               listServices={listServicesAutomation}
             />
             <CardServices
               title="Diseño"
-              imageSrc={getAssetPath("/disenoServiceImage.png")}
+              imageSrc={getAssetPath("/images/services/diseno-service.png")}
               listServices={listServicesUxUi}
             />
           </div>
         </section>
         <Image
-          src={getAssetPath("/resplandorImage.png")}
+          src={getAssetPath("/images/hero/resplandor.png")}
           alt="Resplandor Image"
           width={200}
           height={100}
@@ -280,22 +280,22 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto pb-[45px] text-center flex lg:flex-row flex-col gap-4 justify-between items-center">
         <TestimonialCard
-          imageSrc={getAssetPath("/testimonial1.png")}
+          imageSrc={getAssetPath("/images/testimonials/avatar-1.png")}
           name="How to write content about your photographs"
           date="April 09,  2022"
         />
         <TestimonialCard
-          imageSrc={getAssetPath("/testimonial2.png")}
+          imageSrc={getAssetPath("/images/testimonials/avatar-2.png")}
           name="How to write content about your photographs"
           date="April 09,  2022"
         />
         <TestimonialCard
-          imageSrc={getAssetPath("/testimonial3.png")}
+          imageSrc={getAssetPath("/images/testimonials/avatar-3.png")}
           name="How to write content about your photographs"
           date="April 09,  2022"
         />
         <TestimonialCard
-          imageSrc={getAssetPath("/testimonial4.png")}
+          imageSrc={getAssetPath("/images/testimonials/avatar-4.png")}
           name="How to write content about your photographs"
           date="April 09,  2022"
         />
@@ -304,11 +304,11 @@ export default function Home() {
 
       {/* <section className="w-[80%] mx-auto pt-0 text-center">
         <MainCard
-          imageSrc={getAssetPath("/statsImage.png")}
+          imageSrc={getAssetPath("/images/misc/stats.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconS.svg")}
+              src={getAssetPath("/icons/ui/s.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -321,11 +321,11 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/apiImage.png")}
+          imageSrc={getAssetPath("/images/services/api.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconApi.svg")}
+              src={getAssetPath("/icons/ui/api.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -339,11 +339,11 @@ export default function Home() {
 
       <section className="w-[80%] mx-auto py-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/refactorImage.png")}
+          imageSrc={getAssetPath("/images/services/refactor.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconRefactor.svg")}
+              src={getAssetPath("/icons/ui/refactor.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}

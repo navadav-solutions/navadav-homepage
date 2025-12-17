@@ -38,7 +38,7 @@ export default function DisenoPage() {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${getAssetPath("/mainHeroImage.png")})`,
+          backgroundImage: `url(${getAssetPath("/images/hero/main.png")})`,
         }}
       >
         <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">
@@ -108,7 +108,7 @@ export default function DisenoPage() {
             >
               Agenda cita
               <Image
-                src={getAssetPath("/arrowRight.svg")}
+                src={getAssetPath("/icons/ui/arrow-right.svg")}
                 alt="Arrow Right"
                 width={20}
                 height={20}
@@ -130,11 +130,11 @@ export default function DisenoPage() {
 
       <section className="w-[80%] mx-auto pt-0 text-center">
         <MainCard
-          imageSrc={getAssetPath("/disenoImage.png")}
+          imageSrc={getAssetPath("/images/services/diseno.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/disenoIcon.svg")}
+              src={getAssetPath("/icons/services/diseno.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -147,11 +147,11 @@ export default function DisenoPage() {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/identidadImage.png")}
+          imageSrc={getAssetPath("/images/services/identidad.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/identidadIcon.svg")}
+              src={getAssetPath("/icons/services/identidad.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}

@@ -39,7 +39,7 @@ const AutomatizacionAI = () => {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${getAssetPath("/mainHeroImage.png")})`,
+          backgroundImage: `url(${getAssetPath("/images/hero/main.png")})`,
         }}
       >
         <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">
@@ -109,7 +109,7 @@ const AutomatizacionAI = () => {
             >
               Agenda cita
               <Image
-                src={getAssetPath("/arrowRight.svg")}
+                src={getAssetPath("/icons/ui/arrow-right.svg")}
                 alt="Arrow Right"
                 width={20}
                 height={20}
@@ -131,11 +131,11 @@ const AutomatizacionAI = () => {
 
       <section className="w-[80%] mx-auto pt-0 text-center">
         <MainCard
-          imageSrc={getAssetPath("/automatizacionImage.png")}
+          imageSrc={getAssetPath("/images/services/automatizacion.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/automatizacionIcon.svg")}
+              src={getAssetPath("/icons/services/automatizacion.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -148,11 +148,11 @@ const AutomatizacionAI = () => {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/asistentesImage.png")}
+          imageSrc={getAssetPath("/images/services/asistentes.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/asistentesIcon.svg")}
+              src={getAssetPath("/icons/services/asistentes.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -166,11 +166,11 @@ const AutomatizacionAI = () => {
 
       <section className="w-[80%] mx-auto py-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/analiticaImage.png")}
+          imageSrc={getAssetPath("/images/services/analitica.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/analiticaIcon.svg")}
+              src={getAssetPath("/icons/services/analitica.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}

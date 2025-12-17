@@ -39,7 +39,7 @@ const SolucionesAMedida = () => {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${getAssetPath("/mainHeroImage.png")})`,
+          backgroundImage: `url(${getAssetPath("/images/hero/main.png")})`,
         }}
       >
         <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">
@@ -109,7 +109,7 @@ const SolucionesAMedida = () => {
             >
               Agenda cita
               <Image
-                src={getAssetPath("/arrowRight.svg")}
+                src={getAssetPath("/icons/ui/arrow-right.svg")}
                 alt="Arrow Right"
                 width={20}
                 height={20}
@@ -132,11 +132,11 @@ const SolucionesAMedida = () => {
 
       <section className="w-[80%] mx-auto pt-0 text-center">
         <MainCard
-          imageSrc={getAssetPath("/statsImage.png")}
+          imageSrc={getAssetPath("/images/misc/stats.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconS.svg")}
+              src={getAssetPath("/icons/ui/s.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -149,11 +149,11 @@ const SolucionesAMedida = () => {
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/apiImage.png")}
+          imageSrc={getAssetPath("/images/services/api.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconApi.svg")}
+              src={getAssetPath("/icons/ui/api.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
@@ -167,11 +167,11 @@ const SolucionesAMedida = () => {
 
       <section className="w-[80%] mx-auto py-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/refactorImage.png")}
+          imageSrc={getAssetPath("/images/services/refactor.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconRefactor.svg")}
+              src={getAssetPath("/icons/ui/refactor.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
