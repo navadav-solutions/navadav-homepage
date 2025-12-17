@@ -7,9 +7,9 @@ const CardStepByStep = ({ imageSrc, title, description }: { imageSrc: string, ti
       <div className="">
         <Image src={getAssetPath(imageSrc)} alt="Step 1" width={100} height={100} />
       </div>
-      <div className="flex flex-col items-start justify-start w-[80%]">
+      <div className="flex flex-col items-start justify-start w-[100%]">
         <span className="text-[40px] font-[700] text-[#2B2B40]">{title}</span>
-        <p className="text-[24px] font-[400] text-[#585967] text-start">{description}</p>
+        <p className="text-[24px] font-[400] text-[#585967] text-start w-[90%]">{description}</p>
       </div>
     </section>
   );

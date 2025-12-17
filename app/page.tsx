@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
-        <div className="flex flex-row items-start justify-start gap-10">
+        <div className="flex flex-col lg:flex-row items-start justify-start gap-10">
           <div className="flex flex-col items-start justify-start gap-10 ">
             <CardStepByStep
               imageSrc={getAssetPath("/diagnosticoIcon.svg")}
@@ -167,20 +167,20 @@ export default function Home() {
             />
             <CardStepByStep
               imageSrc={getAssetPath("/retroalimentacionIcon.svg")}
-              title="Diagnóstico Inicial"
-              description="Profundizamos en cómo funciona tu negocio, identificando desafíos y oportunidades clave para trazar la ruta de mejora."
+              title="Demo funcional"
+              description="Mostramos un primer avance práctico de la solución, para que visualices rápidamente cómo encaja con tus necesidades."
             />
           </div>
           <div className="flex flex-col items-start justify-start gap-10 mt-20">
             <CardStepByStep
               imageSrc={getAssetPath("/demoIcon.svg")}
-              title="Diagnóstico Inicial"
-              description="Profundizamos en cómo funciona tu negocio, identificando desafíos y oportunidades clave para trazar la ruta de mejora."
+              title="Retroalimentación Activa"
+              description="Recogemos tus impresiones y las de tu equipo para pulir la propuesta y asegurar que responde al 100% a tus expectativas."
             />
             <CardStepByStep
               imageSrc={getAssetPath("/diagnostico2Icon.svg")}
-              title="Diagnóstico Inicial"
-              description="Profundizamos en cómo funciona tu negocio, identificando desafíos y oportunidades clave para trazar la ruta de mejora."
+              title="Despliegue Estratégico"
+              description="Lanzamos la solución en tu día a día, acompañándote de cerca para que impacte de forma inmediata en tus objetivos y crezca junto a ti."
             />
           </div>
         </div>
@@ -203,8 +203,7 @@ export default function Home() {
         </p>
       </section>
       <div className="relative">
-        <section className="w-[80%] flex flex-row items-start justify-start gap-10 mx-auto py-16 text-center flex flex-col justify-center items-center">
-
+        <section className="w-[80%] flex flex-col lg:flex-row items-start justify-start gap-10 mx-auto py-16 text-center flex flex-col justify-center items-center">
           <div className="flex-1">
             <CardServices
               title="Diseño"

@@ -8,32 +8,28 @@ import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";
 
 const questions = [
   {
-    title: "¿Cómo es el proceso de trabajo con NAVADAV?",
-    paragraph: "Comenzamos con una fase de entendimiento del negocio, donde analizamos tus flujos de operación, objetivos y prioridades.Luego diseñamos una solución paso a paso, con entregas iterativas y comunicación continua para validar resultados."
-  },
-  {
-    title: "¿Qué nivel de participación tiene el cliente durante el desarrollo?",
+    title: "¿Qué tan compleja es la implementación de una solución de automatización o IA?",
     paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
   },
   {
-    title: "¿Qué ocurre una vez finalizado el proyecto?",
+    title: "¿Cómo garantizan la seguridad y confidencialidad de la información?",
     paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
   },
   {
-    title: "¿Cómo garantizan que la solución se adapte realmente a la operación del cliente?",
+    title: "¿Necesito cambiar mis sistemas actuales para implementar automatización o agentes inteligentes?",
     paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
   },
   {
-    title: "¿Qué tipo de proyectos suelen desarrollar?",
+    title: "¿Qué nivel de personalización ofrecen los agentes inteligentes o flujos automatizados?",
     paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
   },
   {
-    title: "¿Cuánto tiempo toma implementar una solución?",
+    title: "¿Brindan acompañamiento después de la implementación?",
     paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
   },
 ]
 
-const SolucionesAMedida = () => {
+const AutomatizacionAI = () => {
   return (
     <Layout>
       <section
@@ -121,64 +117,63 @@ const SolucionesAMedida = () => {
       </section>
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
         <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">
-          Soluciones a la medida
+          Automatización e Inteligencia Artificial
         </h2>
-        <p className="text-[24px] lg:text-[32px] font-[400] text-gray-600 lg:w-[90%] w-[100%] m-[0px]">
-          Creamos soluciones digitales que optimizan tus operaciones y mejoran
-          la experiencia de tus clientes.
+        <p className="text-[24px] lg:text-[32px] font-[400] text-gray-600 lg:w-[80%] w-[100%] m-[0px]">
+          Reducimos tareas manuales y mejoramos la eficiencia con flujos automatizados e inteligencia artificial aplicada.
         </p>
       </section>
 
 
       <section className="w-[80%] mx-auto pt-0 text-center">
         <MainCard
-          imageSrc={getAssetPath("/statsImage.png")}
+          imageSrc={getAssetPath("/automatizacionImage.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconS.svg")}
+              src={getAssetPath("/automatizacionIcon.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
             />
           }
-          title="Aplicaciones a la Medida"
-          description="Diseñamos y desarrollamos plataformas adaptadas a tus procesos de negocio, con tecnología moderna, alto rendimiento y escalabilidad."
+          title="Automatización de Procesos"
+          description="Implementamos soluciones que ahorran tiempo y eliminan errores humanos, optimizando la productividad y la precisión operativa."
         />
       </section>
 
       <section className="w-[80%] mx-auto pt-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/apiImage.png")}
+          imageSrc={getAssetPath("/asistentesImage.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconApi.svg")}
+              src={getAssetPath("/asistentesIcon.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
             />
           }
-          title="Integraciones y APIs Empresariales"
-          description="Conectamos tus sistemas, aplicaciones y servicios externos para que tu información fluya de forma segura y automatizada."
+          title="Asistentes y Chatbots Inteligentes"
+          description="Creamos asistentes virtuales y bots entrenados con la información de tu empresa, que agilizan la atención y la toma de decisiones."
           reverse={true}
         />
       </section>
 
       <section className="w-[80%] mx-auto py-12 text-center">
         <MainCard
-          imageSrc={getAssetPath("/refactorImage.png")}
+          imageSrc={getAssetPath("/analiticaImage.png")}
           imageAlt="Main Card Image"
           icon={
             <Image
-              src={getAssetPath("/iconRefactor.svg")}
+              src={getAssetPath("/analiticaIcon.svg")}
               alt="Main Card Icon"
               width={100}
               height={100}
             />
           }
-          title="Modernización y Refactorización de Sistemas"
-          description="Transformamos aplicaciones heredadas en arquitecturas modernas, más estables, eficientes y fáciles de mantener."
+          title="Analítica y Datos Inteligentes"
+          description="Integramos y procesamos tus datos para generar reportes y dashboards que impulsen decisiones estratégicas."
           reverse={false}
         />
       </section>
@@ -209,4 +204,4 @@ const SolucionesAMedida = () => {
   )
 }
 
-export default SolucionesAMedida
+export default AutomatizacionAI

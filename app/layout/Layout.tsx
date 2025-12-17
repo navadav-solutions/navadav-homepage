@@ -10,6 +10,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const pathname = usePathname();
 
   const handleToggleMenu = () => {
@@ -31,7 +32,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
 
   return (
     <div className="w-full">
-      <nav className="w-[90%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center p-4 absolute top-0 left-1/2 transform -translate-x-1/2 z-50">
+      <nav className="w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center p-4 absolute top-0 left-1/2 transform -translate-x-1/2 z-50">
         <Image
           src={getAssetPath("/mainLogo.svg")}
           alt="logo"
@@ -77,14 +78,22 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                   <p className="font-semibold text-gray-800">Soluciones a medida</p>
                 </div>
               </Link>
+             
+              <Link href="/servicios/automatizacion-ai" onClick={() => setIsServicesOpen(false)}>
+                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <p className="font-semibold text-gray-800">Automatización AI</p>
+                </div>
+              </Link>
+
+              <Link href="/servicios/inteligencia-negocios" onClick={() => setIsServicesOpen(false)}>
+                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <p className="font-semibold text-gray-800">Inteligencia de Negocios</p>
+                </div>
+              </Link>
+
               <Link href="/servicios/diseno" onClick={() => setIsServicesOpen(false)}>
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
                   <p className="font-semibold text-gray-800">Diseño</p>
-                </div>
-              </Link>
-              <Link href="/servicios/inteligencia-de-negocios" onClick={() => setIsServicesOpen(false)}>
-                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">Inteligencia de negocios</p>
                 </div>
               </Link>
             </div>
@@ -177,9 +186,8 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                     Home
                   </button>
                 </Link>
-                <Link
-                  href="/servicios"
-                  onClick={handleCloseMenu}
+                {/* Mobile Servicios Dropdown */}
+                <div
                   className={`transition-all duration-300 ${
                     isAnimating
                       ? "opacity-100 translate-x-0"
@@ -189,10 +197,60 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                     transitionDelay: isAnimating ? "200ms" : "0ms",
                   }}
                 >
-                  <button className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${pathname === "/servicios" ? "text-[#0743D7]" : "text-gray-800"}`}>
+                  <button 
+                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 flex items-center justify-between ${pathname.startsWith("/servicios") ? "text-[#0743D7]" : "text-gray-800"}`}
+                  >
                     Servicios
+                    <svg 
+                      className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </button>
-                </Link>
+                  
+                  {/* Submenu */}
+                  <div className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}>
+                    <Link
+                      href="/servicios/soluciones-a-medida"
+                      onClick={handleCloseMenu}
+                    >
+                      <div className="pl-8 py-2 hover:bg-gray-50 cursor-pointer transition-colors">
+                        <p className="text-gray-700">Soluciones a medida</p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="/servicios/inteligencia-de-negocios"
+                      onClick={handleCloseMenu}
+                    >
+                      <div className="pl-8 py-2 hover:bg-gray-50 cursor-pointer transition-colors">
+                        <p className="text-gray-700">Inteligencia de Negocios</p>
+                      </div>
+                    </Link>
+                    
+                    <Link
+                      href="/servicios/automatizacion-ai"
+                      onClick={handleCloseMenu}
+                    >
+                      <div className="pl-8 py-2 hover:bg-gray-50 cursor-pointer transition-colors">
+                        <p className="text-gray-700">Automatización AI</p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="/servicios/diseno"
+                      onClick={handleCloseMenu}
+                    >
+                      <div className="pl-8 py-2 hover:bg-gray-50 cursor-pointer transition-colors">
+                        <p className="text-gray-700">Diseño</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
                 <Link
                   href="/portafolio"
                   onClick={handleCloseMenu}
@@ -295,7 +353,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
               and Digital <br /> Transformation
             </p>
             <div className="flex flex-col items-start justify-center lg:font-weight-[400] font-[700] text-[#D3C7D2]">
-              <p className="text-[24px] font-bold text-left mb-[40px]">
+              <p className="text-[24px] font-bold text-left mb-[40px] text-white">
                 Get in touch
               </p>
               <ul className="flex flex-col items-start justify-center gap-[24px]">

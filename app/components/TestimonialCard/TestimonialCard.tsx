@@ -4,7 +4,7 @@ import React from 'react'
 
 const TestimonialCard = ({ imageSrc, name, date }: { imageSrc: string, name: string, date: string }) => {
   return (
-    <article className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden cursor-pointer group">
+    <article className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden cursor-pointer group transition-transform duration-300 ease-out hover:scale-105">
       {/* Imagen de fondo */}
       <Image 
         src={imageSrc} 
