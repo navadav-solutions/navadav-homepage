@@ -19,7 +19,7 @@ const CardServices = ({ title, imageSrc, listServices }: CardServicesProps) => {
     <section className="flex flex-col items-start justify-start w-full bg-white rounded-[104px] rounded-b-[96px] w-full lg:w-[615px]">
      <div className="relative w-full aspect-[615/350] rounded-t-[104px] overflow-hidden">
         <Image 
-        src={getAssetPath(imageSrc)} 
+        src={imageSrc} 
         alt="Service 1" 
         fill
     className="object-cover" />
