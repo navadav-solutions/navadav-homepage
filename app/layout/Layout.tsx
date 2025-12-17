@@ -78,16 +78,16 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                   <p className="font-semibold text-gray-800">Soluciones a medida</p>
                 </div>
               </Link>
-             
-              <Link href="/servicios/automatizacion-ai" onClick={() => setIsServicesOpen(false)}>
-                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">Automatización AI</p>
-                </div>
-              </Link>
 
               <Link href="/servicios/inteligencia-negocios" onClick={() => setIsServicesOpen(false)}>
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
                   <p className="font-semibold text-gray-800">Inteligencia de Negocios</p>
+                </div>
+              </Link>
+             
+              <Link href="/servicios/automatizacion-ai" onClick={() => setIsServicesOpen(false)}>
+                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <p className="font-semibold text-gray-800">Automatización AI</p>
                 </div>
               </Link>
 

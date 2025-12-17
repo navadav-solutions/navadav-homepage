@@ -63,7 +63,7 @@ const AccordeonCard = ({ title, paragraph }: AccordeonCardProps) => {
           ${isOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}
         `}
       >
-        <p className="text-gray-600 text-start leading-relaxed">
+        <p className="text-gray-600 text-start leading-relaxed w-[90%]">
           {paragraph}
         </p>
       </div>

@@ -13,23 +13,23 @@ const questions = [
   },
   {
     title: "¿Qué nivel de participación tiene el cliente durante el desarrollo?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Qué ocurre una vez finalizado el proyecto?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Cómo garantizan que la solución se adapte realmente a la operación del cliente?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Qué tipo de proyectos suelen desarrollar?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Cuánto tiempo toma implementar una solución?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
 ]
 
@@ -39,7 +39,7 @@ const SolucionesAMedida = () => {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${getAssetPath("/ejemplo1.png")})`,
+          backgroundImage: `url(${getAssetPath("/mainHeroImage.png")})`,
         }}
       >
         <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">

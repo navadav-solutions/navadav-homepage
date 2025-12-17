@@ -13,19 +13,19 @@ const questions = [
   },
   {
     title: "¿Cómo garantizan la seguridad y confidencialidad de la información?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Necesito cambiar mis sistemas actuales para implementar automatización o agentes inteligentes?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Qué nivel de personalización ofrecen los agentes inteligentes o flujos automatizados?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
   {
     title: "¿Brindan acompañamiento después de la implementación?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "",
   },
 ]
 
@@ -35,7 +35,7 @@ const AutomatizacionAI = () => {
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `url(${getAssetPath("/ejemplo1.png")})`,
+          backgroundImage: `url(${getAssetPath("/mainHeroImage.png")})`,
         }}
       >
         <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">
