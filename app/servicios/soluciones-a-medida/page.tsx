@@ -13,23 +13,23 @@ const questions = [
   },
   {
     title: "¿Qué nivel de participación tiene el cliente durante el desarrollo?",
-    paragraph: "",
+    paragraph: "El cliente es parte activa del equipo. Participa en decisiones clave, revisa avances periódicos y valida cada entrega para garantizar que la solución responda a sus necesidades reales.",
   },
   {
     title: "¿Qué ocurre una vez finalizado el proyecto?",
-    paragraph: "",
+    paragraph: "Entregamos toda la documentación técnica y funcional, capacitamos a tu equipo y, si lo deseas, ofrecemos acompañamiento para la evolución continua del sistema.",
   },
   {
     title: "¿Cómo garantizan que la solución se adapte realmente a la operación del cliente?",
-    paragraph: "",
+    paragraph: "Dedicamos tiempo a entender tu modelo de negocio y tus herramientas actuales. El diseño técnico se construye alrededor de esos elementos, no en contra de ellos.",
   },
   {
     title: "¿Qué tipo de proyectos suelen desarrollar?",
-    paragraph: "",
+    paragraph: "Creamos sistemas de gestión, portales internos, aplicaciones web corporativas, APIs empresariales y herramientas de integración entre diferentes plataformas.",
   },
   {
     title: "¿Cuánto tiempo toma implementar una solución?",
-    paragraph: "",
+    paragraph: "Depende del alcance y la complejidad del proyecto, pero trabajamos con entregas tempranas y visibles desde las primeras semanas para asegurar resultados tangibles y rápidos.",
   },
 ]
 

@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-10 w-[90%] bg-[#F1F2F9] mx-auto rounded-[24px] p-[64px]">
+      <section className="flex flex-col lg:flex-row gap-10 w-[90%] bg-[#F1F2F9] mx-auto rounded-[24px] lg:p-[64px] p-[24px]">
         <div className="flex-1w-[465px] max-w-[465px] max-h-[392px] h-[392px]">
           <Image
             src={getAssetPath("/testimonialImage.png")}
@@ -133,16 +133,16 @@ export default function Home() {
 
         <div className="flex-1 flex flex-col items-start justify-start">
           <div>
-            <Image src={getAssetPath("/quoteIcon.svg")} alt="Quote Icon" width={115} height={115} />
+            <Image src={getAssetPath("/quoteIcon.svg")} alt="Quote Icon" width={115} height={115} className="lg:w-[115px] w-[80px] h-[80px] lg:h-auto lg:w-auto" />
           </div>
-          <p className="text-[32px] font-[500] w-[80%] text-[#53535B]" >
+          <p className="lg:text-[32px] text-[24px] font-[500] lg:w-[80%] w-[100%] text-[#53535B] lg:mb-0 mb-4" >
             We love navadav! Our designers were using it for their projects, so clients already knew what navadav was and how to use it.
           </p>
-          <div className="flex items-center justify-start gap-2 mt-auto">
-            <p className="text-[16px] font-[400] text-gray-600">
+          <div className="flex items-center justify-start gap-2 mt-auto ">
+            <p className="lg:text-[16px] text-[14px] font-[400] text-gray-600">
               <b>Jenn Wilson</b>  Co-founder de
             </p>
-            <Image src={getAssetPath("/amazonBadge.png")} alt="Amazon Badge" width={100} height={100} />
+            <Image src={getAssetPath("/amazonBadge.png")} alt="Amazon Badge" width={100} height={100} className="lg:w-[100px] w-[80px] lg:h-auto lg:w-auto" />
 
           </div>
         </div>
@@ -158,8 +158,8 @@ export default function Home() {
       </section>
 
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
-        <div className="flex flex-col lg:flex-row items-start justify-start gap-10">
-          <div className="flex flex-col items-start justify-start gap-10 ">
+        <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4">
+          <div className="flex flex-col items-start justify-start lg:gap-10 gap-4 ">
             <CardStepByStep
               imageSrc={getAssetPath("/diagnosticoIcon.svg")}
               title="Diagnóstico Inicial"
@@ -171,7 +171,7 @@ export default function Home() {
               description="Mostramos un primer avance práctico de la solución, para que visualices rápidamente cómo encaja con tus necesidades."
             />
           </div>
-          <div className="flex flex-col items-start justify-start gap-10 mt-20">
+          <div className="flex flex-col items-start justify-start lg:gap-10 gap-4 lg:mt-20 mt-0">
             <CardStepByStep
               imageSrc={getAssetPath("/demoIcon.svg")}
               title="Retroalimentación Activa"

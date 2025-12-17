@@ -224,7 +224,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                     </Link>
 
                     <Link
-                      href="/servicios/inteligencia-de-negocios"
+                      href="/servicios/inteligencia-negocios"
                       onClick={handleCloseMenu}
                     >
                       <div className="pl-8 py-2 hover:bg-gray-50 cursor-pointer transition-colors">

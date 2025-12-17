@@ -12,23 +12,23 @@ const questions = [
   },
   {
     title: "¿Puedo mantener mi identidad visual actual?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "Sí. Podemos trabajar sobre tu identidad existente o proponer una evolución que conserve la esencia de tu marca, adaptándola a entornos digitales modernos.",
   },
   {
     title: "¿Los sitios web que desarrollan son administrables por el cliente?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "Sí. Entregamos sitios autogestionables y capacitamos a tu equipo para realizar actualizaciones sin depender de soporte técnico constante.",
   },
   {
     title: "¿Cómo garantizan que la solución se adapte realmente a la operación del cliente?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "Evaluamos indicadores de interacción, tiempo en sitio, conversión, usabilidad y satisfacción del usuario para medir el impacto de cada mejora.",
   },
   {
     title: "¿Qué tan involucrado debe estar mi equipo durante el diseño?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "Tu equipo participa en etapas clave: definición de objetivos, validación de prototipos y revisión final. Trabajamos de forma colaborativa para garantizar resultados que representen a tu empresa.",
   },
   {
     title: "¿Qué tipo de mantenimiento o evolución recomiendan después del lanzamiento?",
-    paragraph: "El proceso se adapta al tamaño y madurez de tu empresa. Comenzamos con una evaluación de tus operaciones y ejecutamos implementaciones progresivas, con entregas visibles y bajo riesgo.",
+    paragraph: "Revisiones periódicas de contenido, rendimiento y usabilidad, acompañadas de actualizaciones visuales y técnicas que mantengan la relevancia de tu marca digital.",
   },
 ]
 

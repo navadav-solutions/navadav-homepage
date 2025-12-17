@@ -13,23 +13,23 @@ const questions = [
   },
   {
     title: "¿Cómo se garantiza la seguridad de los datos analizados o visualizados?",
-    paragraph: "",
+    paragraph: "La información se gestiona en entornos privados y bajo políticas de acceso controlado. Además, cumplimos con las buenas prácticas de seguridad recomendadas por Microsoft y los estándares de la industria.",
   },
   {
     title: "¿Necesito tener licencias de Microsoft 365 para acceder a estos servicios?",
-    paragraph: "",
+    paragraph: "No necesariamente. Podemos asesorarte sobre los planes más convenientes o implementar soluciones compatibles con las herramientas que ya utilizas.",
   },
   {
     title: "¿Cómo puede la inteligencia de datos mejorar mi gestión empresarial?",
-    paragraph: "",
+    paragraph: "Te permite entender lo que realmente ocurre en tu organización, anticiparte a los problemas y tomar decisiones basadas en evidencia, no en suposiciones. Los datos se convierten en un activo estratégico que guía el crecimiento y la eficiencia.",
   },
   {
     title: "¿Cómo acompañan a la empresa durante el proceso de cambio?",
-    paragraph: "",
+    paragraph: "Brindamos capacitación, documentación y seguimiento continuo para asegurar la adopción efectiva de nuevas herramientas, prácticas y metodologías.",
   },
   {
     title: "¿Cuánto tiempo toma un proceso de transformación digital?",
-    paragraph: "",
+    paragraph: "Depende del tamaño de la empresa y su madurez tecnológica, pero trabajamos por fases para generar resultados visibles desde los primeros meses.",
   }
 ]
 
