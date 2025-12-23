@@ -40,6 +40,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setTimeout(() => setIsMenuOpen(false), 300);
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact-form");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="w-full">
       <nav className={`w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : ""}`}>
@@ -130,11 +137,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </Link>
             )
           } */}
-          <Link href="/contact">
-            <button className="bg-white rounded-[16px] text-[#032F9D] p-[12px] transition-all cursor-pointer shadow-sm">
-              Contact us
-            </button>
-          </Link>
+          <button 
+            onClick={scrollToContact}
+            className="bg-white rounded-[16px] text-[#032F9D] p-[12px] transition-all cursor-pointer shadow-sm hover:bg-gray-50"
+          >
+            Contact us
+          </button>
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -310,10 +318,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     Careers
                   </button>
                 </Link>
-                <Link
-                  href="/contact"
-                  onClick={handleCloseMenu}
-                  className={`transition-all duration-300 ${isAnimating
+                <div
+                  onClick={() => {
+                    handleCloseMenu();
+                    setTimeout(scrollToContact, 350);
+                  }}
+                  className={`transition-all duration-300 cursor-pointer ${isAnimating
                       ? "opacity-100 translate-x-0"
                       : "opacity-0 translate-x-4"
                     }`}
@@ -324,7 +334,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <button className="w-full text-left px-4 py-2 rounded-[16px] bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-all cursor-pointer">
                     Contact us
                   </button>
-                </Link>
+                </div>
               </nav>
             </div>
           </div>

@@ -4,7 +4,7 @@ import { getAssetPath } from "../../utils/assets";
 
 const ContactForm = () => {
   return (
-    <div>
+    <div id="contact-form">
       <section className="w-[80%] mx-auto py-16 lg:mb-32 mb-8">
         <div className="flex gap-8">
           {/* Formulario - Lado Izquierdo */}
