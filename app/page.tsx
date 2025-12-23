@@ -75,7 +75,7 @@ const listServicesBusinessIntelligence = [
 
 export default function Home() {
   return (
-    <Layout isHome={true}>
+    <Layout>
       <section
         className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
         style={{

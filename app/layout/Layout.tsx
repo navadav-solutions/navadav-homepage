@@ -2,16 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getAssetPath } from "../utils/assets";
 
-const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: boolean }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleToggleMenu = () => {
     if (!isMenuOpen) {
@@ -32,7 +42,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
 
   return (
     <div className="w-full">
-      <nav className="w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 absolute top-0 left-1/2 transform -translate-x-1/2 z-50">
+      <nav className={`w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : ""}`}>
         <div className="relative w-[200px] h-[auto] z-10 relative">
           <Image
             src={getAssetPath("/logos/final.svg")}
@@ -111,7 +121,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
           </Link>
         </div>
         <div className="hidden lg:flex gap-4 z-10 relative">
-          {
+          {/* {
             !isHome && (
               <Link href="/careers">
                 <button className="py-[12px] px-[16px] rounded-[16px] bg-white/20 backdrop-blur-md border border-white/30 text-[var(--primary-color-text)] font-semibold hover:bg-white/50 transition-all cursor-pointer shadow-sm">
@@ -119,7 +129,7 @@ const Layout = ({ children, isHome }: { children: React.ReactNode, isHome?: bool
                 </button>
               </Link>
             )
-          }
+          } */}
           <Link href="/contact">
             <button className="bg-white rounded-[16px] text-[#032F9D] p-[12px] transition-all cursor-pointer shadow-sm">
               Contact us
