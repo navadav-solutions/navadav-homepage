@@ -77,12 +77,13 @@ export default function Home() {
   return (
     <Layout>
       <section
-        className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
+        className="w-full h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden"
         style={{
           backgroundImage: `url(${getAssetPath("/images/misc/ejemplo1.png")})`,
         }}
       >
-        <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center">
+        
+        <div className="w-full lg:w-[80%] mx-auto h-full flex items-center justify-center relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             <h1 className="text-3xl lg:text-[72px] font-[700] mb-10">
               <span className="text-gray-800 leading-[1.3]">
