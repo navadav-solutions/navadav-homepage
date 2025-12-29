@@ -1,6 +1,6 @@
 import ContactForm from "./components/ContactForm/ContactForm";
 import MainCard from "./components/MainCard/MainCard";
-import Layout from "./layout/Layout";
+import Layout, { scrollToContact } from "./layout/Layout";
 import Image from "next/image";
 import { getAssetPath } from "./utils/assets";
 import CardStepByStep from "./components/CardStepByStep/CardSteoByStep";
@@ -136,6 +136,7 @@ export default function Home() {
                 background: "radial-gradient(50% 50% at 50% 50%, #0743D7 0%, #2D69FD 100%)",
                 boxShadow: "0 -4px 4px 0 rgba(3, 47, 157, 0.40) inset, 0 4px 4px 0 rgba(250, 251, 255, 0.40) inset",
               }}
+              onClick={scrollToContact}
             >
               Agenda cita
               <Image

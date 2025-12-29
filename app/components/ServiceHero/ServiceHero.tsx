@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { getAssetPath } from "../../utils/assets";
+import { scrollToContact } from "@/app/layout/Layout";
 
 const ServiceHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -95,6 +96,7 @@ const ServiceHero = () => {
               transitionDuration: "700ms",
               transitionTimingFunction: "ease-out",
             }}
+            onClick={scrollToContact}
           >
             Agenda cita
             <Image

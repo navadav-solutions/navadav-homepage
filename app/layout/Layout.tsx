@@ -6,6 +6,13 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getAssetPath } from "../utils/assets";
 
+export function scrollToContact() {
+  const contactSection = document.getElementById("contact-form");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -40,12 +47,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setTimeout(() => setIsMenuOpen(false), 300);
   };
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact-form");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  
 
   return (
     <div className="w-full">
