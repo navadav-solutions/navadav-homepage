@@ -1,6 +1,5 @@
-import { StepByStep } from "../types/stepByStepTypes";
-import { getAssetPath } from "../utils/assets";
-
+import { StepByStep } from "@/app/types/stepByStepTypes";
+import { getAssetPath } from "@/app/utils/assets";
 export const stepByStep: StepByStep[] = [
   {
     title: "Diagnóstico Inicial",

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { getAssetPath } from "../../utils/assets";
-import { scrollToContact } from "../../layout/Layout";
+import { getAssetPath } from "@/app/utils/assets";
+import { scrollToContact } from "@/app/layout/Layout";
 
 interface AgendaButtonProps {
   isVisible: boolean;

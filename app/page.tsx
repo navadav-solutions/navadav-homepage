@@ -1,18 +1,17 @@
-import ContactForm from "./components/ContactForm/ContactForm";
-import Layout from "./layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "./utils/assets";
-import CardStepByStep from "./components/CardStepByStep/CardSteoByStep";
-import CardServices from "./components/CardServices/CardServices";
-import TestimonialCard from "./components/TestimonialCard/TestimonialCard";
-import { services } from "./data/listServices";
-import { stepByStep } from "./data/stepByStep";
-import { listTestimonials } from "./data/listTestimonials";
-import CustomerHero from "./components/CustomerHero/CustomerHero";
-import TitleSection from "./components/TitleSection/TitleSection";
-import MainTitle from "./components/MainTitle/MainTitle";
-import AgendaButton from "./components/AgendaButton/AgendaButton";
-
+import ContactForm from "@/app/components/ContactForm/ContactForm";
+import Layout from "@/app/layout/Layout";
+import { getAssetPath } from "@/app/utils/assets";
+import CardStepByStep from "@/app/components/CardStepByStep/CardSteoByStep";
+import CardServices from "@/app/components/CardServices/CardServices";
+import TestimonialCard from "@/app/components/TestimonialCard/TestimonialCard";
+import { services } from "@/app/data/listServices";
+import { stepByStep } from "@/app/data/stepByStep";
+import { listTestimonials } from "@/app/data/listTestimonials";
+import CustomerHero from "@/app/components/CustomerHero/CustomerHero";
+import TitleSection from "@/app/components/TitleSection/TitleSection";
+import MainTitle from "@/app/components/MainTitle/MainTitle";
+import AgendaButton from "@/app/components/AgendaButton/AgendaButton";
 
 export default function Home() {
   return (

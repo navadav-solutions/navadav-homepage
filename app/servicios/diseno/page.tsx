@@ -1,5 +1,5 @@
 import { getAssetPath } from "@/app/utils/assets";
-import Layout from "../../layout/Layout";
+import Layout from "@/app/layout/Layout";
 import Image from "next/image";
 import MainCard from "@/app/components/MainCard/MainCard";
 import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";

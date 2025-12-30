@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { getAssetPath } from "../utils/assets";
+import { getAssetPath } from "@/app/utils/assets";
 
 export function scrollToContact() {
   const contactSection = document.getElementById("contact-form");

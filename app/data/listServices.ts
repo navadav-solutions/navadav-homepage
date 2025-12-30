@@ -1,5 +1,5 @@
-import { ListServices } from "../types/listServicesTypes"
-import { getAssetPath } from "../utils/assets"
+import { ListServices } from "@/app/types/listServicesTypes"
+import { getAssetPath } from "@/app/utils/assets"
 
 export const listServicesUxUi: ListServices[] = [
   {

@@ -1,6 +1,6 @@
-import React from "react";
+
+import { getAssetPath } from "@/app/utils/assets";
 import Image from "next/image";
-import { getAssetPath } from "../../utils/assets";
 
 const ContactForm = () => {
   return (

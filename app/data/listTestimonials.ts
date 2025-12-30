@@ -1,6 +1,5 @@
-import { ListTestimonials } from "../types/listTestimonialsTypes";
-import { getAssetPath } from "../utils/assets";
-
+import { ListTestimonials } from "@/app/types/listTestimonialsTypes";
+import { getAssetPath } from "@/app/utils/assets";
 export const listTestimonials: ListTestimonials[] = [
   {
     id: 1,

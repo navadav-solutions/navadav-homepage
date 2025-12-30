@@ -1,8 +1,8 @@
-import ContactForm from "../../components/ContactForm/ContactForm";
-import MainCard from "../../components/MainCard/MainCard";
-import Layout from "../../layout/Layout";
+import ContactForm from "@/app/components/ContactForm/ContactForm";
+import MainCard from "@/app/components/MainCard/MainCard";
+import Layout from "@/app/layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "../../utils/assets";
+import { getAssetPath } from "@/app/utils/assets";
 import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";
 import ServiceHero from "@/app/components/ServiceHero/ServiceHero";
 

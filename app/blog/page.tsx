@@ -1,10 +1,8 @@
-import ContactForm from "../components/ContactForm/ContactForm";
-import Layout from "../layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "../utils/assets";
-import CardStepByStep from "../components/CardStepByStep/CardSteoByStep";
-import CardServices from "../components/CardServices/CardServices";
-import TestimonialCard from "../components/TestimonialCard/TestimonialCard";
+import ContactForm from "@/app/components/ContactForm/ContactForm";
+import Layout from "@/app/layout/Layout";
+import TestimonialCard from "@/app/components/TestimonialCard/TestimonialCard";
+import { getAssetPath } from "@/app/utils/assets";
 
 const listServicesUxUi = [
   {

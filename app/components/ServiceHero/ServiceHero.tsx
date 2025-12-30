@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getAssetPath } from "../../utils/assets";
-import AgendaButton from "../AgendaButton/AgendaButton";
+import { getAssetPath } from "@/app/utils/assets";
+import AgendaButton from "@/app/components/AgendaButton/AgendaButton";
 
 const ServiceHero = () => {
   const [isVisible, setIsVisible] = useState(false);

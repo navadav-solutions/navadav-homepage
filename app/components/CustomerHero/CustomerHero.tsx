@@ -1,5 +1,4 @@
-import { getAssetPath } from '@/app/utils/assets'
-import Image from 'next/image'
+import { getAssetPath } from "@/app/utils/assets";import Image from 'next/image'
 
 const CustomerHero = () => {
   return (
