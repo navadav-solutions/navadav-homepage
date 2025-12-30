@@ -1,5 +1,4 @@
 'use client';
-import { getAssetPath } from '@/app/utils/assets';
 import Image from 'next/image';
 
 

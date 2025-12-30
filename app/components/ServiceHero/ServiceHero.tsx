@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { getAssetPath } from "../../utils/assets";
-import { scrollToContact } from "@/app/layout/Layout";
+import AgendaButton from "../AgendaButton/AgendaButton";
 
 const ServiceHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,31 +81,7 @@ const ServiceHero = () => {
               </span>
             </span>
           </h1>
-          <button
-            className={`h-[58px] lg:h-[auto] bg-gradient-to-b from-blue-600 to-blue-500 text-white px-[36px] py-[20px] rounded-[16px] text-lg font-semibold shadow-lg flex items-center gap-2 hover:from-blue-700 hover:to-blue-600 transition-all hover:scale-105 cursor-pointer ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
-            style={{
-              background:
-                "radial-gradient(85.16% 87.63% at 50% 50%, #0743D7 0%, #2D69FD 100%)",
-              boxShadow: "0 0 30px 0 rgba(113, 137, 255, 0.70)",
-              transitionDelay: isVisible ? "200ms" : "0ms",
-              transitionDuration: "700ms",
-              transitionTimingFunction: "ease-out",
-            }}
-            onClick={scrollToContact}
-          >
-            Agenda cita
-            <Image
-              src={getAssetPath("/icons/ui/arrow-right.svg")}
-              alt="Arrow Right"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-          </button>
+          <AgendaButton isVisible={isVisible} />
         </div>
       </div>
     </section>

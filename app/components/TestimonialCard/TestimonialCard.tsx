@@ -1,6 +1,4 @@
-import { getAssetPath } from '@/app/utils/assets'
 import Image from 'next/image'
-import React from 'react'
 
 const TestimonialCard = ({ imageSrc, name, date }: { imageSrc: string, name: string, date: string }) => {
   return (
