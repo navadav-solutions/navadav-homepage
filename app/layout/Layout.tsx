@@ -5,13 +5,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getAssetPath } from "@/app/utils/assets";
+import { scrollToContact } from "../utils/scrollToContact";
 
-export function scrollToContact() {
-  const contactSection = document.getElementById("contact-form");
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

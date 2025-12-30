@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import { getAssetPath } from "@/app/utils/assets";
-import { scrollToContact } from "@/app/layout/Layout";
+import { scrollToContact } from "@/app/utils/scrollToContact";
 
 interface AgendaButtonProps {
   isVisible: boolean;
