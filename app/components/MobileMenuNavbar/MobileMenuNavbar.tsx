@@ -152,7 +152,7 @@ const MobileMenuNavbar = ({
               </div>
             </div>
             <Link
-              href="/portafolio"
+              href="/about"
               onClick={handleCloseMenu}
               className={`transition-all duration-300 ${
                 isAnimating
@@ -165,12 +165,12 @@ const MobileMenuNavbar = ({
             >
               <button
                 className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${
-                  pathname === "/portafolio"
+                  pathname === "/about"
                     ? "text-[#0743D7]"
                     : "text-gray-800"
                 }`}
               >
-                Our Work
+                Quienes Somos
               </button>
             </Link>
             <Link

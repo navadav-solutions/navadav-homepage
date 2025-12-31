@@ -1,3 +1,4 @@
+import { TextSegment } from "@/app/types/aboutDataTypes";
 import Image from "next/image";
 
 interface MainCardProps {
@@ -5,7 +6,7 @@ interface MainCardProps {
   imageAlt: string;
   icon: React.ReactNode;
   title: string;
-  description: string;
+  description: string | TextSegment[];
   reverse?: boolean;
 }
 
@@ -17,6 +18,20 @@ const MainCard = ({
   description,
   reverse = false,
 }: MainCardProps) => {
+
+  const renderDescription = (description: string | TextSegment[]) => {
+    // Si es un array, renderiza cada segmento con su formato
+    return (
+      <p className="text-start lg:text-[24px] text-gray-600 leading-relaxed whitespace-pre-line">
+        {Array.isArray(description) ? description.map((segment, index) => (
+          <span key={index} className={segment.bold ? "font-bold" : ""}>
+            {segment.text}
+          </span>
+        )) : description}
+      </p>
+    );
+  };
+
   return (
     <div
       className={`flex flex-col lg:flex-row w-full ${
@@ -29,9 +44,7 @@ const MainCard = ({
           <h3 className="text-start text-2xl lg:text-3xl font-bold text-gray-800 mb-6">
             {title}
           </h3>
-          <p className="text-start lg:text-lg text-gray-600 leading-relaxed">
-            {description}
-          </p>
+          {renderDescription(description)}
         </div>
       </div>
       <div className={`w-full lg:w-1/2  lg:h-[400px] h-[300px] lg:h-auto lg:min-h-[500px] min-h-[300px] relative overflow-hidden ${reverse ? "lg:rounded-l-[24px]" : "lg:rounded-r-[24px] rounded-b-[0px]"}`}>

@@ -1,7 +1,7 @@
 export const footerLinks = [
   {
     title: "Quienes Somos",
-    link: "/portafolio",
+    link: "/about",
   },
   {
     title: "Nuestra propuesta",

@@ -27,7 +27,7 @@ export const navbarLinks = [
   },
   {
     title: "Quienes Somos",
-    link: "/portafolio",
+    link: "/about",
   },
   {
     title: "Blog",
