@@ -1,85 +1,86 @@
-import { ListServices } from "@/app/types/listServicesTypes"
-import { getAssetPath } from "@/app/utils/assets"
+import { ListServices } from "@/app/types/listServicesTypes";
+import { getAssetPath } from "@/app/utils/assets";
 
-export const listServicesUxUi: ListServices[] = [
+const listServicesDevelopment: ListServices[] = [
   {
-    title: "Diseño web",
+    title: "Aplicaciones Web Personalizadas",
     link: "https://www.google.com",
   },
   {
-    title: "UX/UI Design",
+    title: "Integraciones y APIs Empresariales",
     link: "https://www.google.com",
   },
   {
-    title: "Mobile app design",
+    title: "Modernización y Refactorización de Sistemas",
     link: "https://www.google.com",
   },
-  {
-    title: "Branding",
-    link: "https://www.google.com",
-  },
-]
+];
 
+const listServicesBusinessIntelligence: ListServices[] = [
+  {
+    title: "Modelamiento de Datos y Dashboards Gerenciales",
+    link: "https://www.google.com",
+  },
+  {
+    title: "Consultoría Microsoft 365 y Automatización Empresarial",
+    link: "https://www.google.com",
+  },
+  {
+    title: "Transformación Digital y Metodologías Ágiles",
+    link: "https://www.google.com",
+  },
+];
 
-export const listServicesDevelopment: ListServices[] = [
+const listServicesUxUi: ListServices[] = [
   {
-    title: "Custom software",
+    title: "Diseño UX/UI",
     link: "https://www.google.com",
   },
   {
-    title: "Business Intelligence Consulting",
+    title: "Identidad Visual y Sitios Web Corporativos",
     link: "https://www.google.com",
   },
   {
-    title: "Mobile app design",
+    title: "Optimización de Experiencia Digital",
     link: "https://www.google.com",
   },
-  {
-    title: "MS 365 Consulting",
-    link: "https://www.google.com",
-  },
+];
 
-]
-
-export const listServicesAutomation: ListServices[] = [
+const listServicesAutomation: ListServices[] = [
   {
-    title: "Custom software",
+    title: "Automatización de Procesos",
     link: "https://www.google.com",
   },
   {
-    title: "Business Intelligence Consulting",
+    title: "Agentes Inteligentes Empresariales",
     link: "https://www.google.com",
   },
   {
-    title: "Mobile app design",
+    title: "Flujos Inteligentes de Negocio",
     link: "https://www.google.com",
   },
-  {
-    title: "MS 365 Consulting",
-    link: "https://www.google.com",
-  },
-]
-
+];
 
 export const services = [
   {
-    title: "Desarrollo",
+    title: "Soluciones Empresariales a la Medida",
     imageSrc: getAssetPath("/images/services/desarrollo.png"),
     listServices: listServicesDevelopment,
   },
+
   {
-    title: "Inteligencia de negocios",
-    imageSrc: getAssetPath("/images/services/desarrollo.png"),
-    listServices: listServicesDevelopment,
-  },
-  {
-    title: "Automatización",
+    title: "Automatización e Inteligencia Artificial",
     imageSrc: getAssetPath("/images/services/desarrollo.png"),
     listServices: listServicesAutomation,
   },
   {
-    title: "Diseño",
+    title: "Inteligencia de Negocio",
+    imageSrc: getAssetPath("/images/services/desarrollo.png"),
+    listServices: listServicesBusinessIntelligence,
+  },
+  {
+    title: "Diseño y Experiencia Digital",
     imageSrc: getAssetPath("/images/services/diseno-service.png"),
     listServices: listServicesUxUi,
   },
-]
+];

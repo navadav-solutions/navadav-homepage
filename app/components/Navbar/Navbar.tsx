@@ -1,12 +1,12 @@
 "use client";
-import { navbarLinks } from '@/app/data/navbarLinks';
-import { getAssetPath } from '@/app/utils/assets'
-import { scrollToContact } from '@/app/utils/scrollToContact'
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import MobileMenuNavbar from '../MobileMenuNavbar/MobileMenuNavbar';
+import { navbarLinks } from "@/app/data/navbarLinks";
+import { getAssetPath } from "@/app/utils/assets";
+import { scrollToContact } from "@/app/utils/scrollToContact";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import MobileMenuNavbar from "../MobileMenuNavbar/MobileMenuNavbar";
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -44,7 +44,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : ""}`}>
+      <nav
+        className={`w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : ""
+        }`}
+      >
         <div className="relative w-[200px] h-[auto] z-10 relative">
           <Image
             src={getAssetPath("/logos/final.svg")}
@@ -64,7 +68,11 @@ const Navbar = () => {
           >
             {navbarLinks.map((link) => (
               <Link key={link.title} href={link.link}>
-                <button className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${pathname === link.link ? "text-[#0743D7]" : ""}`}>
+                <button
+                  className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${
+                    pathname === link.link ? "text-[#0743D7]" : ""
+                  }`}
+                >
                   {link.title}
                 </button>
               </Link>
@@ -72,35 +80,55 @@ const Navbar = () => {
 
             {/* Dropdown Menu */}
             <div
-              className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-200 ${isServicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
-                }`}
+              className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-200 ${
+                isServicesOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
+              }`}
             >
-              <Link href="/servicios/soluciones-a-medida" onClick={() => setIsServicesOpen(false)}>
+              <Link
+                href="/servicios/soluciones-a-medida"
+                onClick={() => setIsServicesOpen(false)}
+              >
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">Soluciones a medida</p>
+                  <p className="font-semibold text-gray-800">
+                    Soluciones a medida
+                  </p>
                 </div>
               </Link>
 
-              <Link href="/servicios/inteligencia-negocios" onClick={() => setIsServicesOpen(false)}>
+              <Link
+                href="/servicios/inteligencia-negocios"
+                onClick={() => setIsServicesOpen(false)}
+              >
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">Inteligencia de Negocios</p>
+                  <p className="font-semibold text-gray-800">
+                    Inteligencia de Negocios
+                  </p>
                 </div>
               </Link>
 
-              <Link href="/servicios/automatizacion-ai" onClick={() => setIsServicesOpen(false)}>
+              <Link
+                href="/servicios/automatizacion-ai"
+                onClick={() => setIsServicesOpen(false)}
+              >
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">Automatización AI</p>
+                  <p className="font-semibold text-gray-800">
+                    Automatización AI
+                  </p>
                 </div>
               </Link>
 
-              <Link href="/servicios/diseno" onClick={() => setIsServicesOpen(false)}>
+              <Link
+                href="/servicios/diseno"
+                onClick={() => setIsServicesOpen(false)}
+              >
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
                   <p className="font-semibold text-gray-800">Diseño</p>
                 </div>
               </Link>
             </div>
           </div>
-
         </div>
         <div className="hidden lg:flex gap-4 z-10 relative">
           <button
@@ -130,8 +158,7 @@ const Navbar = () => {
         />
       )}
     </>
+  );
+};
 
-  )
-}
-
-export default Navbar
+export default Navbar;

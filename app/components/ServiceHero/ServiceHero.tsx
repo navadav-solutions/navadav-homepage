@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getAssetPath } from "@/app/utils/assets";
-import AgendaButton from "@/app/components/AgendaButton/AgendaButton";
+import ConversemosButton from "@/app/components/AgendaButton/AgendaButton";
 
 const ServiceHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -81,7 +81,7 @@ const ServiceHero = () => {
               </span>
             </span>
           </h1>
-          <AgendaButton isVisible={isVisible} />
+          <ConversemosButton isVisible={isVisible} />
         </div>
       </div>
     </section>
@@ -89,4 +89,3 @@ const ServiceHero = () => {
 };
 
 export default ServiceHero;
-
