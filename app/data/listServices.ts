@@ -3,7 +3,7 @@ import { getAssetPath } from "@/app/utils/assets";
 
 const listServicesDevelopment: ListServices[] = [
   {
-    title: "Aplicaciones Web Personalizadas",
+    title: "Aplicaciones a la Medida",
     link: "https://www.google.com",
   },
   {

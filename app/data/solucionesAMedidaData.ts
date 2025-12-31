@@ -1,4 +1,3 @@
-
 import { MainCard } from "../types/mainCardTypes";
 import { getAssetPath } from "../utils/assets";
 
@@ -6,28 +5,31 @@ export const solucionesAMedidaData: MainCard[] = [
   {
     id: 1,
     title: "Aplicaciones a la Medida",
-    description: "Diseñamos y desarrollamos plataformas adaptadas a tus procesos de negocio, con tecnología moderna, alto rendimiento y escalabilidad.",
+    description:
+      "Desarrollamos aplicaciones web diseñadas específicamente para tu empresa, con una arquitectura sólida que garantiza rendimiento, seguridad y crecimiento sostenido en el tiempo.",
     imageSrc: getAssetPath("/images/services/api.png"),
     imageAlt: "Aplicaciones a la Medida",
     icon: getAssetPath("/icons/ui/api.svg"),
-    reverse: false
+    reverse: false,
   },
   {
     id: 2,
     title: "Integraciones y APIs Empresariales",
-    description: "Conectamos tus sistemas, aplicaciones y servicios externos para que tu información fluya de forma segura y automatizada.",
+    description:
+      "Integramos tus sistemas y servicios para unificar la información, reducir tareas manuales y habilitar una operación más ágil y conectada.",
     imageSrc: getAssetPath("/images/services/refactor.png"),
     imageAlt: "Integraciones y APIs Empresariales",
     icon: getAssetPath("/icons/ui/refactor.svg"),
-    reverse: true
+    reverse: true,
   },
   {
     id: 3,
     title: "Modernización y Refactorización de Sistemas",
-    description: "Transformamos aplicaciones heredadas en arquitecturas modernas, más estables, eficientes y fáciles de mantener.",
+    description:
+      "Modernizamos sistemas existentes sin interrumpir la operación, mejorando estabilidad, rendimiento y mantenibilidad para preparar tu plataforma para el futuro.",
     imageSrc: getAssetPath("/images/services/refactor.png"),
     imageAlt: "Modernización y Refactorización de Sistemas",
     icon: getAssetPath("/icons/ui/refactor.svg"),
-    reverse: false
+    reverse: false,
   },
-]
+];

@@ -1,12 +1,10 @@
-
-
 export const navbarLinks = [
   {
-    title: "Home",
+    title: "Inicio",
     link: "/",
   },
   {
-    title: "Services",
+    title: "Servicios",
     link: "#",
     sublinks: [
       {
@@ -18,7 +16,7 @@ export const navbarLinks = [
         link: "/servicios/inteligencia-negocios",
       },
       {
-        title: "Automatización AI",
+        title: "Automatización e IA",
         link: "/servicios/automatizacion-ai",
       },
       {
@@ -28,11 +26,11 @@ export const navbarLinks = [
     ],
   },
   {
-    title: "Our Work",
+    title: "Quienes Somos",
     link: "/portafolio",
   },
   {
     title: "Blog",
     link: "/blog",
   },
-]
+];

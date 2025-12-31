@@ -2,7 +2,7 @@ import Image from "next/image";
 import ContactForm from "@/app/components/ContactForm/ContactForm";
 import Layout from "@/app/layout/Layout";
 import { getAssetPath } from "@/app/utils/assets";
-import CardStepByStep from "@/app/components/CardStepByStep/CardSteoByStep";
+import CardStepByStep from "@/app/components/CardStepByStep/CardStepByStep";
 import CardServices from "@/app/components/CardServices/CardServices";
 import TestimonialCard from "@/app/components/TestimonialCard/TestimonialCard";
 import { services } from "@/app/data/listServices";

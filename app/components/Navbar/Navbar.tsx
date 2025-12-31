@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-4 z-10 relative">
           {navbarLinks.map((link) => {
             // Si es Services, renderizar con dropdown
-            if (link.title === "Services") {
+            if (link.title === "Servicios") {
               return (
                 <div
                   key={link.title}
