@@ -4,7 +4,7 @@ import { getAssetPath } from '@/app/utils/assets'
 import { scrollToContact } from '@/app/utils/scrollToContact'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import MobileMenuNavbar from '../MobileMenuNavbar/MobileMenuNavbar';
 
@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     // Verificar la posición inicial del scroll al montar el componente
@@ -55,7 +56,8 @@ const Navbar = () => {
             alt="logo"
             width={200}
             height={0}
-            className="w-full h-auto"
+            className="w-full h-auto cursor-pointer"
+            onClick={() => router.push("/")}
           />
         </div>
         {/* Desktop Navigation */}
