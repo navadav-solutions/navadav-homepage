@@ -2,7 +2,6 @@ import ContactForm from "@/app/components/ContactForm/ContactForm";
 import MainCard from "@/app/components/MainCard/MainCard";
 import Layout from "@/app/layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "@/app/utils/assets";
 import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";
 import ServiceHero from "@/app/components/ServiceHero/ServiceHero";
 import { questions } from "@/app/data/questionsData";
