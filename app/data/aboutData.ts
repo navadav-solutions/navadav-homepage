@@ -73,7 +73,7 @@ export const workLinesData: WorkLine[] = [
     id: 1,
     title: "Soluciones empresariales a la medida",
     description: "Diseñamos y construimos sistemas que se ajusten a la forma en que cada empresa opera, priorizando estabilidad, escalabilidad y claridad operativa.",
-    imageSrc: getAssetPath("/icons/about/logo-microsoft.svg"),
+    imageSrc: getAssetPath("/icons/about/suitcaseIcon.svg"),
     url: "/servicios/soluciones-a-medida/",
   },
   {

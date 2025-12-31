@@ -12,13 +12,13 @@ const AboutUs = () => {
   return (
     <Layout>
       <MainBackground>
-        <h1 className="text-3xl lg:text-[72px] font-bold mb-12">
+        <h1 className="text-[28px] lg:text-[72px] font-bold mb-12">
           Soluciones empresariales a la <br />  medida, alineadas a tu <br /> negocio
         </h1>
         <ConversemosButton isVisible={true} />
       </MainBackground>
 
-      <section className="w-[90%] mx-auto my-24 mt-0 mb-120 rounded-2xl p-8 pt-[170px] pb-[162.5px] flex flex-col items-center justify-center relative"
+      <section className="w-[90%] mx-auto my-24 mt-0 lg:mb-120 mb-65 rounded-2xl p-8 lg:pt-[170px] lg:pb-[162.5px] pt-12 pb-12 flex flex-col items-center justify-center relative"
         style={{
           background: "linear-gradient(180deg, #F1F3F9 57.97%, rgba(241, 243, 249, 0.00) 100%)"
         }}
@@ -26,10 +26,10 @@ const AboutUs = () => {
         <h2 className="text-[28px] lg:text-[48px] font-[600] text-[#000] mb-6 text-center">
           Sobre <span className="font-bold">NAVADAV</span>
         </h2>
-        <p className="text-[18px] lg:text-[32px] text-[#585967] font-normal text-center mb-60">
+        <p className="text-[18px] lg:text-[32px] text-[#585967] font-normal text-center lg:mb-60 mb-35">
           Actuamos como socios tecnológicos, acompañando a nuestros clientes desde la definición del problema hasta la evolución continua de la solución, con foco en productividad, claridad y resultados sostenibles.
         </p>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-[982px] h-[655px]">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full lg:max-w-[982px] max-w-[300px] lg:h-[655px] h-[200px]">
           <Image
             src="/images/about/about-team.jpg"
             alt="Equipo de NAVADAV trabajando juntos"
@@ -77,7 +77,8 @@ const AboutUs = () => {
               src={brand.imageSrc}
               alt={brand.imageAlt}
               width={150}
-              height={150}
+              height={69}
+              className="w-[150px] h-[69px]"
             />
           ))
         }
