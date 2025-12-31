@@ -2,7 +2,6 @@ import { getAssetPath } from '@/app/utils/assets';
 import { scrollToContact } from '@/app/utils/scrollToContact';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
 
 interface MobileMenuNavbarProps {
   handleCloseMenu: () => void;

@@ -4,65 +4,6 @@ import Layout from "@/app/layout/Layout";
 import TestimonialCard from "@/app/components/TestimonialCard/TestimonialCard";
 import { getAssetPath } from "@/app/utils/assets";
 
-const listServicesUxUi = [
-  {
-    title: "Diseño web",
-    link: "https://www.google.com",
-  },
-  {
-    title: "UX/UI Design",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Mobile app design",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Branding",
-    link: "https://www.google.com",
-  },
-]
-
-const listServicesDevelopment = [
-  {
-    title: "Custom software",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Business Intelligence Consulting",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Mobile app design",
-    link: "https://www.google.com",
-  },
-  {
-    title: "MS 365 Consulting",
-    link: "https://www.google.com",
-  },
-
-]
-
-const listServicesAutomation = [
-  {
-    title: "Custom software",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Business Intelligence Consulting",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Mobile app design",
-    link: "https://www.google.com",
-  },
-  {
-    title: "MS 365 Consulting",
-    link: "https://www.google.com",
-  },
-
-]
-
 export default function Blog() {
   return (
     <Layout>
