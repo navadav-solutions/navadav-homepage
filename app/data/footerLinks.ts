@@ -8,7 +8,7 @@ export const footerLinks = [
     link: "/#services",
   },
   {
-    title: "Contact",
+    title: "Contactanos",
     link: "#contact-form",
   },
 ];
