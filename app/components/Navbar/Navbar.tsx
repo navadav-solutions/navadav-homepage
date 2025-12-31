@@ -144,7 +144,7 @@ const Navbar = () => {
             onClick={scrollToContact}
             className="bg-white rounded-[16px] text-[#032F9D] p-[12px] transition-all cursor-pointer shadow-sm hover:bg-gray-50"
           >
-            Contact us
+            Contactanos
           </button>
         </div>
         {/* Mobile Menu Button */}

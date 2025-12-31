@@ -1,25 +1,17 @@
 export const footerLinks = [
   {
-    title: "Services",
-    link: "/servicios",
-  },
-  {
-    title: "Our Work",
+    title: "Quienes Somos",
     link: "/portafolio",
   },
   {
-    title: "About",
-    link: "/about",
-  },
-  {
-    title: "Blog",
-    link: "/blog",
+    title: "Nuestra propuesta",
+    link: "/#services",
   },
   {
     title: "Contact",
-    link: "#",
+    link: "#contact-form",
   },
-]
+];
 
 export const footerSocialLinks = [
   {
@@ -34,4 +26,4 @@ export const footerSocialLinks = [
     title: "LinkedIn",
     link: "https://www.linkedin.com/company/queueunderstop/",
   },
-]
+];

@@ -1,4 +1,3 @@
-
 import { getAssetPath } from "@/app/utils/assets";
 import Image from "next/image";
 
@@ -12,12 +11,12 @@ const ContactForm = () => {
             <div className="flex flex-col lg:flex-row justify-between gap-8">
               <form className="flex flex-col  gap-6 lg:w-[50%] w-[100%]">
                 <h2 className="text-[32px] lg:text-[42px] font-[700] text-gray-800 mb-8 lg:text-left text-center">
-                  ¿Listo para discutir tu proyecto con nosotros?
+                  Conversemos sobre cómo evolucionar tu negocio
                 </h2>
                 <div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex-1">
                     <label className="block text-sm font-medium text-gray-700 mb-0">
-                      Full Name
+                      Nombre
                     </label>
                     <input
                       type="text"
@@ -27,7 +26,7 @@ const ContactForm = () => {
                   </div>
                   <div className="flex-1">
                     <label className="block text-sm font-medium text-gray-700">
-                      Email
+                      Correo electrónico
                     </label>
                     <input
                       type="email"
@@ -38,7 +37,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    About the project
+                    Cuéntanos brevemente qué te gustaría mejorar o evolucionar.
                   </label>
                   <input
                     type="text"
@@ -48,8 +47,8 @@ const ContactForm = () => {
                 </div>
                 <div className="flex lg:flex-row flex-col items-center justify-between gap-4 lg:mt-20 mt-6">
                   <p className="text-[18px] font-[500] lg:font-[400] text-[#2A1A45] lg:text-gray-500 lg:w-[60%] w-[100%] text-left">
-                    By sending this form I confirm that I have read and accept the
-                    Privacy Policy
+                    Al enviar este formulario confirmo que he leído y acepto la
+                    Política de Privacidad.
                   </p>
                   <button
                     type="submit"
@@ -58,8 +57,9 @@ const ContactForm = () => {
                       background:
                         "radial-gradient(85.16% 87.63% at 50% 50%, #0743D7 0%, #2D69FD 100%)",
                       boxShadow: "0 0 30px 0 rgba(113, 137, 255, 0.70)",
-                    }}>
-                    Send
+                    }}
+                  >
+                    Conversemos
                     <Image
                       src={getAssetPath("/icons/ui/arrow-right.svg")}
                       alt="Send Icon"
@@ -69,7 +69,6 @@ const ContactForm = () => {
                     />
                   </button>
                 </div>
-
               </form>
               {/* Imagen/Productos - Lado Derecho */}
               <div className="rounded-[50px] relative overflow-hidden">

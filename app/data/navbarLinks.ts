@@ -20,7 +20,7 @@ export const navbarLinks = [
         link: "/servicios/automatizacion-ai",
       },
       {
-        title: "Diseño",
+        title: "Diseño y Experiencia Digital",
         link: "/servicios/diseno",
       },
     ],

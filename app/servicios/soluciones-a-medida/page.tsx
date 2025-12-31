@@ -10,7 +10,7 @@ import { questionsSolucionesAMedida } from "@/app/data/questionsData";
 const SolucionesAMedida = () => {
   return (
     <Layout>
-      <ServiceHero />
+      <ServiceHero evolutionLabel="tecnológica" />
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
         <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">
           Soluciones Empresariales a la Medida

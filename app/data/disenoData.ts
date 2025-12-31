@@ -5,19 +5,31 @@ export const disenoData: MainCard[] = [
   {
     id: 1,
     title: "Diseño UX/UI",
-    description: "Diseñamos interfaces intuitivas y atractivas que conectan con tus usuarios y mejoran la experiencia digital.",
+    description:
+      "Diseñamos interfaces intuitivas y atractivas que conectan con tus usuarios y mejoran la experiencia digital.",
     imageSrc: getAssetPath("/images/services/diseno.png"),
     imageAlt: "Diseño UX/UI",
     icon: getAssetPath("/icons/services/diseno.svg"),
-    reverse: false
+    reverse: false,
   },
   {
     id: 2,
     title: "Identidad Visual y Sitios Web Corporativos",
-    description: "Construimos tu imagen digital: logo, colores, tipografía y sitio web, transmitiendo la esencia y profesionalismo de tu marca.",
+    description:
+      "Construimos tu imagen digital: logo, colores, tipografía y sitio web, transmitiendo la esencia y profesionalismo de tu marca.",
     imageSrc: getAssetPath("/images/services/identidad.png"),
     imageAlt: "Identidad Visual y Sitios Web Corporativos",
     icon: getAssetPath("/icons/services/identidad.svg"),
-    reverse: true
-  }
-]
+    reverse: true,
+  },
+  {
+    id: 3,
+    title: "Identidad Visual y Sitios Web Corporativos",
+    description:
+      "Analizamos y optimizamos de forma continua la experiencia digital mediante métricas y ajustes iterativos, asegurando evolución constante y valor sostenible.",
+    imageSrc: getAssetPath("/images/services/identidad.png"),
+    imageAlt: "Identidad Visual y Sitios Web Corporativos",
+    icon: getAssetPath("/icons/services/identidad.svg"),
+    reverse: false,
+  },
+];

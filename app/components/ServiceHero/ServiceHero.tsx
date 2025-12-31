@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { getAssetPath } from "@/app/utils/assets";
 import ConversemosButton from "@/app/components/AgendaButton/AgendaButton";
 
-const ServiceHero = () => {
+interface ServiceHeroProps {
+  evolutionLabel: string;
+}
+
+const ServiceHero = ({ evolutionLabel }: ServiceHeroProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -30,7 +34,7 @@ const ServiceHero = () => {
             }`}
           >
             <span className="text-gray-800 leading-[1.3]">
-              Tu aliado tecnológico para <br /> hacer{" "}
+              Acompañamos la{" "}
               <span
                 className="inline-block"
                 style={{
@@ -41,8 +45,8 @@ const ServiceHero = () => {
                   backgroundClip: "text",
                 }}
               >
-                crecer y modernizar
-              </span>{" "}
+                evolución {evolutionLabel}
+              </span>
               <br />
               tu negocio.
             </span>

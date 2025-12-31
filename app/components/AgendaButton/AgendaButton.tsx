@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { getAssetPath } from "@/app/utils/assets";
 import { scrollToContact } from "@/app/utils/scrollToContact";

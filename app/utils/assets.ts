@@ -11,7 +11,7 @@ const getBasePath = (): string => {
  * Obtiene la ruta completa de un asset en la carpeta public
  * @param path - Ruta del asset (ej: "/mainLogo.svg" o "mainLogo.svg")
  * @returns Ruta completa con basePath si es necesario
- * 
+ *
  * @example
  * getAssetPath("/mainLogo.svg") // "/mainLogo.svg" en local, "/navadav/mainLogo.svg" en producción
  * getAssetPath("mainLogo.svg") // "/mainLogo.svg" en local, "/navadav/mainLogo.svg" en producción
@@ -22,4 +22,3 @@ export const getAssetPath = (path: string): string => {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   return `${basePath}${normalizedPath}`;
 };
-
