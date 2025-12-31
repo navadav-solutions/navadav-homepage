@@ -17,9 +17,13 @@ const Navbar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Verificar la posición inicial del scroll al montar el componente
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
+    // Llama a handleScroll una vez para establecer el estado inicial
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
