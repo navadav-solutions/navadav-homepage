@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 // Configuración del basePath para GitHub Pages
 // En desarrollo (local), no se usa basePath
 // En producción (GitHub Pages), se usa "/navadav" si está configurado
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = "";
 
 const nextConfig: NextConfig = {
   output: "export",
