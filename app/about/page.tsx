@@ -4,7 +4,7 @@ import Layout from "@/app/layout/Layout";
 import Image from "next/image";
 import MainBackground from "../components/MainBackground/MainBackground";
 import ConversemosButton from "../components/AgendaButton/AgendaButton";
-import { aboutData, brandsData, workLinesData, whyNavadavData } from "../data/aboutData";
+import { aboutData, workLinesData, whyNavadavData } from "../data/aboutData";
 import { getAssetPath } from "../utils/assets";
 import CardStepByStep from "../components/CardStepByStep/CardStepByStep";
 import BrandList from "../components/BrandList/BrandList";

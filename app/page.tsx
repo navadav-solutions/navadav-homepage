@@ -12,7 +12,6 @@ import CustomerHero from "@/app/components/CustomerHero/CustomerHero";
 import TitleSection from "@/app/components/TitleSection/TitleSection";
 import MainTitle from "@/app/components/MainTitle/MainTitle";
 import ConversemosButton from "@/app/components/AgendaButton/AgendaButton";
-import { brandsData } from "./data/aboutData";
 import BrandList from "./components/BrandList/BrandList";
 
 export default function Home() {
