@@ -38,7 +38,8 @@ export default function Home() {
                 src={brand.imageSrc}
                 alt={brand.imageAlt}
                 width={150}
-                height={150}
+                height={69}
+                className="color-[#2B2B40]"
               />
             ))
           }

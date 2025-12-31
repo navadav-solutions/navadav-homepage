@@ -32,37 +32,37 @@ export const brandsData: Brand[] = [
   {
     id: 1,
     name: "Clear",
-    imageSrc: getAssetPath("/images/about/clear.png"),
+    imageSrc: getAssetPath("/icons/about/logo-microsoft.svg"),
     imageAlt: "Clear",
   },
   {
     id: 2,
     name: "Delivery",
-    imageSrc: getAssetPath("/images/about/delivery.png"),
+    imageSrc: getAssetPath("/icons/about/logo-dropbox.svg"),
     imageAlt: "Delivery",
   },
   {
     id: 3,
     name: "Samsung",
-    imageSrc: getAssetPath("/images/about/samsung.svg"),
+    imageSrc: getAssetPath("/icons/about/logo-medium.svg"),
     imageAlt: "Samsung",
   },
   {
     id: 4,
     name: "Glenair",
-    imageSrc: getAssetPath("/images/about/glenair.png"),
+    imageSrc: getAssetPath("/icons/about/logo-slack.svg"),
     imageAlt: "Glenair",
   },
   {
     id: 5,
     name: "Bare",
-    imageSrc: getAssetPath("/images/about/bare.png"),
+    imageSrc: getAssetPath("/icons/about/logo-zoom.svg"),
     imageAlt: "Bare",
   },
   {
     id: 6,
     name: "Adidas",
-    imageSrc: getAssetPath("/images/about/adidas.png"),
+    imageSrc: getAssetPath("/icons/about/logo-asana.svg"),
     imageAlt: "Adidas",
   },
 ];
@@ -73,7 +73,7 @@ export const workLinesData: WorkLine[] = [
     id: 1,
     title: "Soluciones empresariales a la medida",
     description: "Diseñamos y construimos sistemas que se ajusten a la forma en que cada empresa opera, priorizando estabilidad, escalabilidad y claridad operativa.",
-    imageSrc: getAssetPath("/icons/about/suitcaseIcon.svg"),
+    imageSrc: getAssetPath("/icons/about/logo-microsoft.svg"),
     url: "/servicios/soluciones-a-medida/",
   },
   {
