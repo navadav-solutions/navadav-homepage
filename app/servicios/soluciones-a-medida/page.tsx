@@ -2,36 +2,11 @@ import ContactForm from "@/app/components/ContactForm/ContactForm";
 import MainCard from "@/app/components/MainCard/MainCard";
 import Layout from "@/app/layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "@/app/utils/assets";
 import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";
 import ServiceHero from "@/app/components/ServiceHero/ServiceHero";
+import { solucionesAMedidaData } from "@/app/data/solucionesAMedidaData";
+import { questionsSolucionesAMedida } from "@/app/data/questionsData";
 
-const questions = [
-  {
-    title: "¿Cómo es el proceso de trabajo con NAVADAV?",
-    paragraph: "Comenzamos con una fase de entendimiento del negocio, donde analizamos tus flujos de operación, objetivos y prioridades.Luego diseñamos una solución paso a paso, con entregas iterativas y comunicación continua para validar resultados."
-  },
-  {
-    title: "¿Qué nivel de participación tiene el cliente durante el desarrollo?",
-    paragraph: "El cliente es parte activa del equipo. Participa en decisiones clave, revisa avances periódicos y valida cada entrega para garantizar que la solución responda a sus necesidades reales.",
-  },
-  {
-    title: "¿Qué ocurre una vez finalizado el proyecto?",
-    paragraph: "Entregamos toda la documentación técnica y funcional, capacitamos a tu equipo y, si lo deseas, ofrecemos acompañamiento para la evolución continua del sistema.",
-  },
-  {
-    title: "¿Cómo garantizan que la solución se adapte realmente a la operación del cliente?",
-    paragraph: "Dedicamos tiempo a entender tu modelo de negocio y tus herramientas actuales. El diseño técnico se construye alrededor de esos elementos, no en contra de ellos.",
-  },
-  {
-    title: "¿Qué tipo de proyectos suelen desarrollar?",
-    paragraph: "Creamos sistemas de gestión, portales internos, aplicaciones web corporativas, APIs empresariales y herramientas de integración entre diferentes plataformas.",
-  },
-  {
-    title: "¿Cuánto tiempo toma implementar una solución?",
-    paragraph: "Depende del alcance y la complejidad del proyecto, pero trabajamos con entregas tempranas y visibles desde las primeras semanas para asegurar resultados tangibles y rápidos.",
-  },
-]
 
 const SolucionesAMedida = () => {
   return (
@@ -47,59 +22,27 @@ const SolucionesAMedida = () => {
         </p>
       </section>
 
-
-      <section className="w-[80%] mx-auto pt-0 text-center">
-        <MainCard
-          imageSrc={getAssetPath("/images/misc/stats.png")}
-          imageAlt="Main Card Image"
-          icon={
-            <Image
-              src={getAssetPath("/icons/ui/s.svg")}
-              alt="Main Card Icon"
-              width={100}
-              height={100}
+      {
+        solucionesAMedidaData.map((item) => (
+          <section className="w-[80%] mx-auto pt-0 text-center mt-12" key={item.id}>
+            <MainCard
+              imageSrc={item.imageSrc}
+              imageAlt={item.imageAlt}
+              icon={
+                <Image
+                  src={item.icon}
+                  alt="Main Card Icon"
+                  width={100}
+                  height={100}
+                />
+              }
+              title={item.title}
+              description={item.description}
+              reverse={item.reverse}
             />
-          }
-          title="Aplicaciones a la Medida"
-          description="Diseñamos y desarrollamos plataformas adaptadas a tus procesos de negocio, con tecnología moderna, alto rendimiento y escalabilidad."
-        />
-      </section>
-
-      <section className="w-[80%] mx-auto pt-12 text-center">
-        <MainCard
-          imageSrc={getAssetPath("/images/services/api.png")}
-          imageAlt="Main Card Image"
-          icon={
-            <Image
-              src={getAssetPath("/icons/ui/api.svg")}
-              alt="Main Card Icon"
-              width={100}
-              height={100}
-            />
-          }
-          title="Integraciones y APIs Empresariales"
-          description="Conectamos tus sistemas, aplicaciones y servicios externos para que tu información fluya de forma segura y automatizada."
-          reverse={true}
-        />
-      </section>
-
-      <section className="w-[80%] mx-auto py-12 text-center">
-        <MainCard
-          imageSrc={getAssetPath("/images/services/refactor.png")}
-          imageAlt="Main Card Image"
-          icon={
-            <Image
-              src={getAssetPath("/icons/ui/refactor.svg")}
-              alt="Main Card Icon"
-              width={100}
-              height={100}
-            />
-          }
-          title="Modernización y Refactorización de Sistemas"
-          description="Transformamos aplicaciones heredadas en arquitecturas modernas, más estables, eficientes y fáciles de mantener."
-          reverse={false}
-        />
-      </section>
+          </section>
+        ))
+      }
 
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
         <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">
@@ -112,7 +55,7 @@ const SolucionesAMedida = () => {
 
       <section className="w-[80%] lg:w-[60%] mx-auto py-8 text-center flex flex-col justify-center items-center gap-8">
         {
-          questions?.map((question) => (
+          questionsSolucionesAMedida?.map((question) => (
             <AccordeonCard
               key={question.title}
               title={question.title}

@@ -2,36 +2,11 @@ import ContactForm from "@/app/components/ContactForm/ContactForm";
 import MainCard from "@/app/components/MainCard/MainCard";
 import Layout from "@/app/layout/Layout";
 import Image from "next/image";
-import { getAssetPath } from "@/app/utils/assets";
 import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";
 import ServiceHero from "@/app/components/ServiceHero/ServiceHero";
+import { questionsAutomatization } from "@/app/data/questionsData";
+import { inteligenciaNegociosData } from "@/app/data/InteligenciaNegociosData";
 
-const questions = [
-  {
-    title: "¿Cómo aborda NAVADAV un proceso de transformación digital?",
-    paragraph: "Comenzamos con un diagnóstico de tu modelo operativo, cultura y herramientas actuales. A partir de ahí, definimos una hoja de ruta clara con iniciativas priorizadas, responsables y métricas de impacto que conectan tecnología con resultados de negocio.",
-  },
-  {
-    title: "¿Cómo se garantiza la seguridad de los datos analizados o visualizados?",
-    paragraph: "La información se gestiona en entornos privados y bajo políticas de acceso controlado. Además, cumplimos con las buenas prácticas de seguridad recomendadas por Microsoft y los estándares de la industria.",
-  },
-  {
-    title: "¿Necesito tener licencias de Microsoft 365 para acceder a estos servicios?",
-    paragraph: "No necesariamente. Podemos asesorarte sobre los planes más convenientes o implementar soluciones compatibles con las herramientas que ya utilizas.",
-  },
-  {
-    title: "¿Cómo puede la inteligencia de datos mejorar mi gestión empresarial?",
-    paragraph: "Te permite entender lo que realmente ocurre en tu organización, anticiparte a los problemas y tomar decisiones basadas en evidencia, no en suposiciones. Los datos se convierten en un activo estratégico que guía el crecimiento y la eficiencia.",
-  },
-  {
-    title: "¿Cómo acompañan a la empresa durante el proceso de cambio?",
-    paragraph: "Brindamos capacitación, documentación y seguimiento continuo para asegurar la adopción efectiva de nuevas herramientas, prácticas y metodologías.",
-  },
-  {
-    title: "¿Cuánto tiempo toma un proceso de transformación digital?",
-    paragraph: "Depende del tamaño de la empresa y su madurez tecnológica, pero trabajamos por fases para generar resultados visibles desde los primeros meses.",
-  }
-]
 
 const InteligenciaNegocios = () => {
   return (
@@ -46,59 +21,28 @@ const InteligenciaNegocios = () => {
         </p>
       </section>
 
-
-      <section className="w-[80%] mx-auto pt-0 text-center">
-        <MainCard
-          imageSrc={getAssetPath("/images/services/modelamiento.png")}
-          imageAlt="Main Card Image"
-          icon={
-            <Image
-              src={getAssetPath("/icons/services/modelamiento.svg")}
-              alt="Main Card Icon"
-              width={100}
-              height={100}
+      {
+        inteligenciaNegociosData.map((item) => (
+          <section className="w-[80%] mx-auto pt-0 text-center mt-12" key={item.id}>
+            <MainCard
+              key={item.id}
+              imageSrc={item.imageSrc}
+              imageAlt={item.imageAlt}
+              icon={
+                <Image
+                  src={item.icon}
+                  alt="Main Card Icon"
+                  width={100}
+                  height={100}
+                />
+              }
+              title={item.title}
+              description={item.description}
+              reverse={item.reverse}
             />
-          }
-          title="Modelamiento de Datos y Dashboards Gerenciales"
-          description="Convertimos los datos de tu empresa en información útil, visual y accionable, para respaldar decisiones estratégicas."
-        />
-      </section>
-
-      <section className="w-[80%] mx-auto pt-12 text-center">
-        <MainCard
-          imageSrc={getAssetPath("/images/services/consultoria.png")}
-          imageAlt="Main Card Image"
-          icon={
-            <Image
-              src={getAssetPath("/icons/services/consultoria.svg")}
-              alt="Main Card Icon"
-              width={100}
-              height={100}
-            />
-          }
-          title="Consultoría Microsoft 365 y Automatización Empresarial"
-          description="Optimizamos tus procesos internos aprovechando al máximo las herramientas del ecosistema Microsoft: Power Automate, Power BI, Teams y SharePoint."
-          reverse={true}
-        />
-      </section>
-
-      <section className="w-[80%] mx-auto py-12 text-center">
-        <MainCard
-          imageSrc={getAssetPath("/images/services/transformacion.png")}
-          imageAlt="Main Card Image"
-          icon={
-            <Image
-              src={getAssetPath("/icons/services/transformacion.svg")}
-              alt="Main Card Icon"
-              width={100}
-              height={100}
-            />
-          }
-          title="Transformación Digital y Metodologías Ágiles"
-          description="Te ayudamos a modernizar tu organización, adoptando prácticas ágiles y una cultura digital orientada a la productividad."
-          reverse={false}
-        />
-      </section>
+          </section>
+        ))
+      }
 
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
         <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">
@@ -111,7 +55,7 @@ const InteligenciaNegocios = () => {
 
       <section className="w-[80%] lg:w-[60%] mx-auto py-8 text-center flex flex-col justify-center items-center gap-8">
         {
-          questions?.map((question) => (
+          questionsAutomatization.map((question) => (
             <AccordeonCard
               key={question.title}
               title={question.title}

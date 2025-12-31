@@ -1,6 +1,7 @@
+import { MainCard } from "../types/mainCardTypes";
 import { getAssetPath } from "../utils/assets";
 
-export const automatizationData = [
+export const automatizationData: MainCard[] = [
   {
     id: 1,
     title: "Automatización de Procesos",
@@ -8,6 +9,7 @@ export const automatizationData = [
     imageSrc: getAssetPath("/images/services/automatizacion.png"),
     imageAlt: "Automatización de Procesos",
     icon: getAssetPath("/icons/services/automatizacion.svg"),
+    reverse: false
   },
   {
     id: 2,
@@ -25,5 +27,6 @@ export const automatizationData = [
     imageSrc: getAssetPath("/images/services/analitica.png"),
     imageAlt: "Analítica de Datos",
     icon: getAssetPath("/icons/services/analitica.svg"),
+    reverse: false
   }
 ]

@@ -4,7 +4,7 @@ import Layout from "@/app/layout/Layout";
 import Image from "next/image";
 import AccordeonCard from "@/app/components/AccordeonCard/AccordeonCard";
 import ServiceHero from "@/app/components/ServiceHero/ServiceHero";
-import { questions } from "@/app/data/questionsData";
+import { questionsAutomatization } from "@/app/data/questionsData";
 import { automatizationData } from "@/app/data/automatizationData";
 
 
@@ -20,7 +20,7 @@ const AutomatizacionAI = () => {
           Reducimos tareas manuales y mejoramos la eficiencia con flujos automatizados e inteligencia artificial aplicada.
         </p>
       </section>
-
+      
       {
         automatizationData.map((item) => (
           <section className="w-[80%] mx-auto pt-0 text-center mt-12" key={item.id}>
@@ -28,7 +28,6 @@ const AutomatizacionAI = () => {
               key={item.id}
               imageSrc={item.imageSrc}
               imageAlt={item.imageAlt}
-              reverse={item.reverse}
               icon={
                 <Image
                   src={item.icon}
@@ -39,6 +38,7 @@ const AutomatizacionAI = () => {
               }
               title={item.title}
               description={item.description}
+              reverse={item.reverse}
             />
           </section>
         ))
@@ -55,7 +55,7 @@ const AutomatizacionAI = () => {
 
       <section className="w-[80%] lg:w-[60%] mx-auto py-8 text-center flex flex-col justify-center items-center gap-8">
         {
-          questions.map((question) => (
+          questionsAutomatization.map((question) => (
             <AccordeonCard
               key={question.title}
               title={question.title}
