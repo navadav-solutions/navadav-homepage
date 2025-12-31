@@ -4,7 +4,9 @@ import Layout from "@/app/layout/Layout";
 import Image from "next/image";
 import MainBackground from "../components/MainBackground/MainBackground";
 import ConversemosButton from "../components/AgendaButton/AgendaButton";
-import { aboutData, brandsData } from "../data/aboutData";
+import { aboutData, brandsData, workLinesData, whyNavadavData } from "../data/aboutData";
+import { getAssetPath } from "../utils/assets";
+import CardStepByStep from "../components/CardStepByStep/CardStepByStep";
 
 const AboutUs = () => {
   return (
@@ -27,7 +29,7 @@ const AboutUs = () => {
         <p className="text-[18px] lg:text-[32px] text-[#585967] font-normal text-center mb-60">
           Actuamos como socios tecnológicos, acompañando a nuestros clientes desde la definición del problema hasta la evolución continua de la solución, con foco en productividad, claridad y resultados sostenibles.
         </p>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-[982px] h-[655px]">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-[982px] h-[655px]">
           <Image
             src="/images/about/about-team.jpg"
             alt="Equipo de NAVADAV trabajando juntos"
@@ -79,6 +81,159 @@ const AboutUs = () => {
             />
           ))
         }
+      </section>
+
+      <section className="w-[80%] mx-auto py-16 pb-15 text-center flex flex-col justify-center items-center">
+        <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">
+          El fundador
+        </h2>
+      </section>
+
+      <div className="w-full max-w-[982px] h-[655px] mx-auto rounded-[62px] overflow-hidden">
+        <Image
+          src="/images/about/about-team.jpg"
+          alt="Equipo de NAVADAV trabajando juntos"
+          width={982}
+          height={655}
+          className="rounded-xl object-cover shadow-lg w-full h-full"
+        />
+      </div>
+
+      <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
+        <p className="text-[24px] lg:text-[32px] font-[400] text-[#585967] lg:w-[80%] w-[100%] m-[0px] text-justify">
+          NAVADAV surge a partir de mi experiencia diseñando y acompañando soluciones tecnológicas en contextos empresariales reales, donde la tecnología debe integrarse a operaciones existentes, sistemas en producción y decisiones de negocio concretas.
+          <br />
+          <br />
+          Mi trabajo se centra en la definición de soluciones, arquitectura y criterios técnicos que permitan a las empresas evolucionar sus sistemas, automatizar procesos y tomar mejores decisiones sin comprometer la estabilidad ni la operación diaria.
+          <br />
+          <br />
+          A lo largo de mi trayectoria he participado en iniciativas de modernización de sistemas, diseño de soluciones a la medida y automatización de flujos críticos, siempre con un enfoque claro: entender el negocio primero y utilizar la tecnología como un medio, no como un fin.
+          <br />
+          <br />
+          Creo firmemente que las soluciones bien pensadas se reconocen por su claridad, sostenibilidad y capacidad de adaptarse en el tiempo.
+          Ese es el criterio con el que trabajo y el estándar que aplico en cada proyecto.
+        </p>
+      </section>
+
+      <section className="w-[70%] mx-auto my-16">
+        <div className="flex flex-col lg:flex-row items-stretch overflow-hidden">
+          {/* Imagen */}
+          <div className="w-full lg:w-[45%] relative h-[556px] lg:h-auto min-h-[556px] rounded-[24px] overflow-hidden">
+            <Image
+              src="/images/about/howWeWork.png"
+              alt="Personas trabajando con post-its"
+              layout="fill"
+              className="object-cover"
+              priority
+            />
+          </div>
+          {/* Texto */}
+          <div className="w-full lg:w-[55%] flex flex-col justify-start p-8 lg:p-12 lg:pt-0 lg:pr-0 text-left">
+            <h2 className="text-[28px] lg:text-[48px] font-[600] text-[#000] mb-4">
+              Como Trabajamos
+            </h2>
+            <p className="text-[#585967] text-[24px] font-[400] mb-6 leading-relaxed">
+              Acompañamos a las organizaciones en iniciativas donde la tecnología debe integrarse de forma natural a la operación del negocio, generando impacto real y sostenible.
+            </p>
+            <ul className="list-disc list-inside text-[#585967] pl-0 text-[24px] font-[400]">
+              <li>Adaptarse a procesos existentes sin interrumpir la operación</li>
+              <li>Mejorar la productividad y el trabajo de los equipos</li>
+              <li>Reducir la complejidad operativa y técnica</li>
+              <li>Habilitar mejores decisiones a partir de información clara</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-[90%] mx-auto py-16 mt-60 text-center flex flex-col justify-center items-center relative">
+        <Image
+          src={getAssetPath("/images/hero/elemento-abstracto.png")}
+          alt="Elemento Abstracto"
+          width={200}
+          height={100}
+          className="absolute left-10 top-[0%] -translate-y-[50%] hidden lg:block"
+        />
+        <h2 className="text-[32px] lg:text-[48px] font-[600] text-[#000] mb-6">
+          Nuestras líneas de trabajo
+        </h2>
+      </section>
+
+      <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
+        <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
+            {workLinesData.map((workLine) => (
+              <CardStepByStep
+                key={workLine.id}
+                isWorkLineSection={true}
+                title={workLine.title}
+                imageSrc={workLine.imageSrc}
+                description={workLine.description}
+                url={workLine.url}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-[90%] mx-auto py-16 mt-60 text-center flex flex-col justify-center items-center relative">
+        <Image
+          src={getAssetPath("/images/about/circleImage.png")}
+          alt="Elemento Abstracto"
+          width={900}
+          height={900}
+          className="absolute transform-rotate-[21.75deg] bottom-[0%] -translate-y-[20%] translate-x-[100%] hidden md:block"
+        />
+      </section>
+
+      {/* Sección Por qué NAVADAV */}
+      <section className="w-[90%] mx-auto py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12">
+
+          <div className="w-full lg:w-1/2 relative h-[400px] lg:h-[600px] rounded-[24px] overflow-hidden">
+            <Image
+              src={getAssetPath("/images/about/apiImage.png")}
+              alt="Tecnología API"
+              fill
+              className="object-cover rounded-[24px]"
+            />
+          </div>
+
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
+            <h2 className="text-[32px] lg:text-[48px] font-bold text-gray-900 mb-6">
+              Por qué NAVADAV
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed">
+              Trabajamos con un enfoque responsable frente a la tecnología, evitando decisiones apresuradas que generan sobrecostos, retrabajos o dependencia innecesaria.
+            </p>
+
+            <div className="flex flex-col gap-6">
+              {whyNavadavData.map((feature) => {
+                return (
+                  <div key={feature.id} className="flex items-start gap-4">
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-lg  flex items-center justify-center`}>
+                      <Image
+                        src={feature.icon}
+                        alt={feature.title}
+                        width={48}
+                        height={48}
+                        className=""
+                      />
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-base lg:text-lg text-gray-600 leading-relaxed w-[80%]">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </section>
 
       <ContactForm />

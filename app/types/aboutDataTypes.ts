@@ -18,3 +18,19 @@ export interface Brand {
   imageSrc: string;
   imageAlt: string;
 }
+
+export interface WorkLine {
+  id: number;
+  title: string;
+  description: string;
+  imageSrc: string;
+  url: string;
+}
+
+export interface WhyNavadavFeature {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+  iconColor: string;
+}

@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-[1920px] mx-auto overflow-x-hidden">
       <Navbar />
       {children}
       <Footer />
