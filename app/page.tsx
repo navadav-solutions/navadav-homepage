@@ -75,7 +75,7 @@ export default function Home() {
 
       <div className="relative">
         <section className="lg:w-[80%] w-[90%] flex flex-col gap-5 mx-auto py-16 text-center flex flex-col justify-center items-center">
-          <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-4">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             {services.map((service) => (
               <CardServices
                 key={service.title}
