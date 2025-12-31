@@ -7,6 +7,7 @@ import ConversemosButton from "../components/AgendaButton/AgendaButton";
 import { aboutData, brandsData, workLinesData, whyNavadavData } from "../data/aboutData";
 import { getAssetPath } from "../utils/assets";
 import CardStepByStep from "../components/CardStepByStep/CardStepByStep";
+import BrandList from "../components/BrandList/BrandList";
 
 const AboutUs = () => {
   return (
@@ -69,20 +70,9 @@ const AboutUs = () => {
         </h2>
       </section>
 
-      <section className="w-[80%] mx-auto py-8 pt-0 text-center flex flex-row justify-between items-center gap-8">
-        {
-          brandsData.map((brand) => (
-            <Image
-              key={brand.id}
-              src={brand.imageSrc}
-              alt={brand.imageAlt}
-              width={150}
-              height={69}
-              className="w-[150px] h-[69px]"
-            />
-          ))
-        }
-      </section>
+      <div className="w-[80%] mx-auto">
+        <BrandList />
+      </div>
 
       <section className="w-[80%] mx-auto py-16 pb-15 text-center flex flex-col justify-center items-center">
         <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">

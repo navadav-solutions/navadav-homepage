@@ -13,6 +13,7 @@ import TitleSection from "@/app/components/TitleSection/TitleSection";
 import MainTitle from "@/app/components/MainTitle/MainTitle";
 import ConversemosButton from "@/app/components/AgendaButton/AgendaButton";
 import { brandsData } from "./data/aboutData";
+import BrandList from "./components/BrandList/BrandList";
 
 export default function Home() {
   return (
@@ -30,20 +31,9 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="absolute bottom-0 left-0 right-0 w-[80%] mx-auto py-8 text-center flex flex-row justify-between items-center gap-8">
-          {
-            brandsData.map((brand) => (
-              <Image
-                key={brand.id}
-                src={brand.imageSrc}
-                alt={brand.imageAlt}
-                width={150}
-                height={69}
-                className="color-[#2B2B40]"
-              />
-            ))
-          }
-        </section>
+        <div className="absolute bottom-0 left-0 right-0 w-[80%] mx-auto py-8">
+          <BrandList />
+        </div>
       </section>
 
 
