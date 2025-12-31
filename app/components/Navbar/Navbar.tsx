@@ -4,7 +4,7 @@ import { getAssetPath } from "@/app/utils/assets";
 import { scrollToContact } from "@/app/utils/scrollToContact";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import MobileMenuNavbar from "../MobileMenuNavbar/MobileMenuNavbar";
 
@@ -15,11 +15,16 @@ const Navbar = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
+    // Verificar la posición inicial del scroll al montar el componente
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
+    // Llama a handleScroll una vez para establecer el estado inicial
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -55,80 +60,84 @@ const Navbar = () => {
             alt="logo"
             width={200}
             height={0}
-            className="w-full h-auto"
+            className="w-full h-auto cursor-pointer"
+            onClick={() => router.push("/")}
           />
         </div>
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-4 z-10 relative">
-          {/* Servicios Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsServicesOpen(true)}
-            onMouseLeave={() => setIsServicesOpen(false)}
-          >
-            {navbarLinks.map((link) => (
+          {navbarLinks.map((link) => {
+            // Si es Services, renderizar con dropdown
+            if (link.title === "Services") {
+              return (
+                <div
+                  key={link.title}
+                  className="relative"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <button
+                    className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${
+                      pathname.startsWith("/servicios") ? "text-[#0743D7]" : ""
+                    }`}
+                  >
+                    {link.title}
+                    <svg
+                      className={`w-4 h-4 inline-block ml-1 transition-transform duration-200 ${
+                        isServicesOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  <div
+                    className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-200 ${
+                      isServicesOpen
+                        ? "opacity-100 visible translate-y-0"
+                        : "opacity-0 invisible -translate-y-2"
+                    }`}
+                  >
+                    {link.sublinks?.map((sublink) => (
+                      <Link
+                        key={sublink.title}
+                        href={sublink.link}
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                          <p className="font-semibold text-gray-800">
+                            {sublink.title}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            // Para los otros links, sin hover
+            return (
               <Link key={link.title} href={link.link}>
                 <button
-                  className={`px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer ${
+                  className={`px-4 py-2  hover:bg-gray-100 rounded-md cursor-pointer ${
                     pathname === link.link ? "text-[#0743D7]" : ""
                   }`}
                 >
                   {link.title}
                 </button>
               </Link>
-            ))}
-
-            {/* Dropdown Menu */}
-            <div
-              className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-200 ${
-                isServicesOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
-              }`}
-            >
-              <Link
-                href="/servicios/soluciones-a-medida"
-                onClick={() => setIsServicesOpen(false)}
-              >
-                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">
-                    Soluciones a medida
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/servicios/inteligencia-negocios"
-                onClick={() => setIsServicesOpen(false)}
-              >
-                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">
-                    Inteligencia de Negocios
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/servicios/automatizacion-ai"
-                onClick={() => setIsServicesOpen(false)}
-              >
-                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">
-                    Automatización AI
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/servicios/diseno"
-                onClick={() => setIsServicesOpen(false)}
-              >
-                <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
-                  <p className="font-semibold text-gray-800">Diseño</p>
-                </div>
-              </Link>
-            </div>
-          </div>
+            );
+          })}
         </div>
         <div className="hidden lg:flex gap-4 z-10 relative">
           <button

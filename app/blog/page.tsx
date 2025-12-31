@@ -3,6 +3,8 @@ import ContactForm from "@/app/components/ContactForm/ContactForm";
 import Layout from "@/app/layout/Layout";
 import TestimonialCard from "@/app/components/TestimonialCard/TestimonialCard";
 import { getAssetPath } from "@/app/utils/assets";
+import { blogSocialLinks } from "../data/blogSocialLinks";
+import { listTestimonials } from "../data/listTestimonials";
 
 export default function Blog() {
   return (
@@ -33,54 +35,11 @@ export default function Blog() {
             </p>
 
             <div className="flex items-center justify-center text-center gap-4">
-              <a
-                href="https://www.facebook.com/queueunderstop/"
-                target={"_blank"}
-                rel={"noreferrer"}
-              >
-                <Image
-                  src={getAssetPath("/icons/social/blog-facebook.svg")}
-                  alt="facebook icon"
-                  width={32}
-                  height={32}
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/queueunderstop/"
-                target={"_blank"}
-                rel={"noreferrer"}
-              >
-                <Image
-                  src={getAssetPath("/icons/social/blog-linkedin.svg")}
-                  alt="linkedin icon"
-                  width={32}
-                  height={32}
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/queueunderstop/"
-                target={"_blank"}
-                rel={"noreferrer"}
-              >
-                <Image
-                  src={getAssetPath("/icons/social/blog-twitter.svg")}
-                  alt="twitter icon"
-                  width={32}
-                  height={32}
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/queueunderstop/"
-                target={"_blank"}
-                rel={"noreferrer"}
-              >
-                <Image
-                  src={getAssetPath("/icons/social/blog-link.svg")}
-                  alt="link icon"
-                  width={32}
-                  height={32}
-                />
-              </a>
+              {blogSocialLinks.map((link) => (
+                <a key={link.id} href={link.link} target={"_blank"} rel={"noreferrer"}>
+                  <Image src={link.icon} alt={link.title} width={32} height={32} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -186,27 +145,20 @@ export default function Blog() {
 
       <section className="w-[80%] mx-auto pt-[45px] pb-[30px] lg:text-center text-start flex flex-row justify-between items-center">
         <h2 className="text-[32px] font-bold text-[#2B2B40] lg:mb-2 mb-0">
-        Our stories
+          Our stories
         </h2>
       </section>
 
       <section className="w-[80%] mx-auto pb-[45px] text-center">
-        <div className="grid grid-cols-4 gap-4 w-full">
-          <TestimonialCard
-            imageSrc={getAssetPath("/images/testimonials/avatar-1.png")}
-            name="How to write content about your photographs"
-            date="April 09,  2022"
-          />
-          <TestimonialCard
-            imageSrc={getAssetPath("/images/testimonials/avatar-2.png")}
-            name="How to write content about your photographs"
-            date="April 09,  2022"
-          />
-          <TestimonialCard
-            imageSrc={getAssetPath("/images/testimonials/avatar-3.png")}
-            name="How to write content about your photographs"
-            date="April 09,  2022"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+          {listTestimonials.slice(0, 3).map((testimonial) => (
+            <TestimonialCard
+              key={testimonial.id}
+              imageSrc={testimonial.imageSrc}
+              name={testimonial.name}
+              date={testimonial.date}
+            />
+          ))}
         </div>
       </section>
 
