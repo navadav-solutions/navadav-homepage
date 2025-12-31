@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-[90%] mx-auto py-16 text-center flex flex-col justify-center items-center relative">
+      <section className="w-[90%] mx-auto py-16 mt-18 text-center flex flex-col justify-center items-center relative">
         <Image
           src={getAssetPath("/images/hero/elemento-abstracto.png")}
           alt="Elemento Abstracto"
@@ -95,7 +95,7 @@ export default function Home() {
       <div className="relative">
         <section
           id="services"
-          className="scroll-mt-24 lg:w-[80%] w-[90%] flex flex-col gap-5 mx-auto py-16 text-center flex flex-col justify-center items-center"
+          className="scroll-mt-24 w-[90%] flex flex-col gap-5 mx-auto py-16 text-center flex flex-col justify-center items-center"
         >
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             {services.map((service) => (
