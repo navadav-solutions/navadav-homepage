@@ -69,7 +69,7 @@ const MobileMenuNavbar = ({
                   pathname === "/" ? "text-[#0743D7]" : "text-gray-800"
                 }`}
               >
-                Home
+                Inicio
               </button>
             </Link>
             {/* Mobile Servicios Dropdown */}
@@ -91,7 +91,7 @@ const MobileMenuNavbar = ({
                     : "text-gray-800"
                 }`}
               >
-                Services
+                Servicios
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${
                     isMobileServicesOpen ? "rotate-180" : ""
@@ -165,9 +165,7 @@ const MobileMenuNavbar = ({
             >
               <button
                 className={`w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-200 ${
-                  pathname === "/about"
-                    ? "text-[#0743D7]"
-                    : "text-gray-800"
+                  pathname === "/about" ? "text-[#0743D7]" : "text-gray-800"
                 }`}
               >
                 Quienes Somos
