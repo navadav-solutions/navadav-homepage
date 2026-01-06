@@ -14,7 +14,12 @@ const AboutUs = () => {
     <Layout>
       <MainBackground>
         <h1 className="text-[28px] lg:text-[72px] font-bold mb-12">
-          Soluciones empresariales a la <br />  medida, alineadas a tu <br /> negocio
+          Soluciones empresariales a la <br /> medida, <span style={{
+            background: "linear-gradient(93deg, #32C3EA 2.5%, #3043D0 58.54%, #33055A 98.04%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text"
+          }}> alineadas a tu <br /> negocio</span>
         </h1>
         <ConversemosButton isVisible={true} />
       </MainBackground>
@@ -75,41 +80,69 @@ const AboutUs = () => {
       </div>
 
       <section className="w-[80%] mx-auto py-16 pb-15 text-center flex flex-col justify-center items-center">
-        <h2 className="text-[32px] lg:text-[48px] font-semibold text-gray-800 mb-6">
-          El fundador
-        </h2>
+
       </section>
 
-      <div className="w-full max-w-[982px] h-[655px] mx-auto rounded-[62px] overflow-hidden">
-        <Image
-          src="/images/about/about-team.jpg"
-          alt="Equipo de NAVADAV trabajando juntos"
-          width={982}
-          height={655}
-          className="rounded-xl object-cover shadow-lg w-full h-full"
-        />
-      </div>
+      <section className="w-[90%] mx-auto flex flex-row  gap-10 justify-between items-start">
+        <div className="w-full max-w-[540px] h-[636px] mx-auto rounded-[62px] relative">
+          <div className="w-full h-full rounded-[62px] overflow-hidden">
+            <Image
+              src="/images/about/fundador.jpg"
+              alt="Equipo de NAVADAV trabajando juntos"
+              width={982}
+              height={655}
+              className="rounded-[62px] object-cover shadow-lg w-full h-full"
+            />
+          </div>
+          
+          {/* Icono abstracto en la esquina superior izquierda de la foto */}
+          <div className="absolute -top-12 -left-15 w-16 h-16 lg:w-[153px] lg:h-[146px] z-20">
+            <Image
+              src={getAssetPath("/images/about/abstracto.png")}
+              alt="Elemento abstracto"
+              width={153}
+              height={146}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          
+          {/* Card del fundador */}
+          <div className="absolute -bottom-15 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[450px] bg-white rounded-[32px] py-[24px] px-[36px] shadow-lg z-10">
+            {/* Contenido de la card */}
+            <div>
+              <h3 className="text-[24px] lg:text-[32px] font-[700] text-[#2B2B40] mb-4">
+                David Navarro
+              </h3>
+              <p className="text-[18px] lg:text-[24px] font-[400] text-[#585967]">
+                Founder & Principal Architect
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
-        <p className="text-[24px] lg:text-[32px] font-[400] text-[#585967] lg:w-[80%] w-[100%] m-[0px] text-justify">
-          NAVADAV surge a partir de mi experiencia diseñando y acompañando soluciones tecnológicas en contextos empresariales reales, donde la tecnología debe integrarse a operaciones existentes, sistemas en producción y decisiones de negocio concretas.
-          <br />
-          <br />
-          Mi trabajo se centra en la definición de soluciones, arquitectura y criterios técnicos que permitan a las empresas evolucionar sus sistemas, automatizar procesos y tomar mejores decisiones sin comprometer la estabilidad ni la operación diaria.
-          <br />
-          <br />
-          A lo largo de mi trayectoria he participado en iniciativas de modernización de sistemas, diseño de soluciones a la medida y automatización de flujos críticos, siempre con un enfoque claro: entender el negocio primero y utilizar la tecnología como un medio, no como un fin.
-          <br />
-          <br />
-          Creo firmemente que las soluciones bien pensadas se reconocen por su claridad, sostenibilidad y capacidad de adaptarse en el tiempo.
-          Ese es el criterio con el que trabajo y el estándar que aplico en cada proyecto.
-        </p>
+        <section className="w-full text-center flex flex-col justify-center items-start">
+          <h2 className="text-[32px] lg:text-[48px] font-[600] text-[#000] mb-6">
+            Nuestro fundador
+          </h2>
+          <p className="text-[24px] lg:text-[24px] font-[400] text-[#585967] w-[100%] m-[0px] text-justify">
+            <b>
+              NAVADAV surge a partir de mi experiencia diseñando y acompañando soluciones tecnológicas en contextos empresariales reales, donde la tecnología debe integrarse a operaciones existentes, sistemas en producción y decisiones de negocio concretas.
+            </b>
+            <br />
+            <br />
+            Mi trabajo se centra en la definición de soluciones, arquitectura y criterios técnicos que permitan a las empresas evolucionar sus sistemas, automatizar procesos y tomar mejores decisiones sin comprometer la estabilidad ni la operación diaria.
+            <br />
+            <br />
+            A lo largo de mi trayectoria he participado en iniciativas de modernización de sistemas, soluciones a la medida y automatización de flujos críticos, siempre con un enfoque claro: entender el negocio primero y utilizar la tecnología como un medio para resolver problemas reales y generar impacto tangible. Trabajo con un criterio orientado a claridad, sostenibilidad y capacidad de adaptación en el tiempo, que es el estándar que aplico en cada proyecto.
+          </p>
+        </section>
       </section>
 
-      <section className="w-[70%] mx-auto my-16">
-        <div className="flex flex-col lg:flex-row items-stretch overflow-hidden">
+
+      <section className="w-[90%] mx-auto mt-60 mb-60">
+        <div className="flex flex-col lg:flex-row-reverse gap-10 items-stretch overflow-hidden">
           {/* Imagen */}
-          <div className="w-full lg:w-[45%] relative h-[556px] lg:h-auto min-h-[556px] rounded-[24px] overflow-hidden">
+          <div className="w-full  relative w-[540px] h-[529px] rounded-[24px] overflow-hidden">
             <Image
               src="/images/about/howWeWork.png"
               alt="Personas trabajando con post-its"
@@ -119,7 +152,7 @@ const AboutUs = () => {
             />
           </div>
           {/* Texto */}
-          <div className="w-full lg:w-[55%] flex flex-col justify-start p-8 lg:p-12 lg:pt-0 lg:pr-0 text-left">
+          <div className="w-full flex flex-col justify-start p-8 lg:p-12 lg:pt-0 lg:pr-0 text-left">
             <h2 className="text-[28px] lg:text-[48px] font-[600] text-[#000] mb-4">
               Como Trabajamos
             </h2>
@@ -142,15 +175,22 @@ const AboutUs = () => {
           alt="Elemento Abstracto"
           width={200}
           height={100}
-          className="absolute left-10 top-[0%] -translate-y-[50%] hidden lg:block"
+          className="absolute left-10 top-[0%] -translate-y-[50%] hidden lg:block z-1"
         />
         <h2 className="text-[32px] lg:text-[48px] font-[600] text-[#000] mb-6">
           Nuestras líneas de trabajo
         </h2>
       </section>
 
-      <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
-        <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4">
+      <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center relative">
+        <Image
+          src={getAssetPath("/images/about/circleImage.png")}
+          alt="Elemento Abstracto"
+          width={900}
+          height={900}
+          className="absolute transform-rotate-[21.75deg] bottom-[0%] translate-y-[20%] translate-x-[90%] hidden md:block z-0"
+        />
+        <div className="flex flex-col lg:flex-row items-start justify-start lg:gap-10 gap-4 relative z-10">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
             {workLinesData.map((workLine) => (
               <CardStepByStep
@@ -166,21 +206,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="w-[90%] mx-auto py-16 mt-60 text-center flex flex-col justify-center items-center relative">
-        <Image
-          src={getAssetPath("/images/about/circleImage.png")}
-          alt="Elemento Abstracto"
-          width={900}
-          height={900}
-          className="absolute transform-rotate-[21.75deg] bottom-[0%] -translate-y-[20%] translate-x-[100%] hidden md:block"
-        />
-      </section>
-
       {/* Sección Por qué NAVADAV */}
       <section className="w-[90%] mx-auto py-16 lg:py-24">
         <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12">
 
-          <div className="w-full lg:w-1/2 relative h-[400px] lg:h-[600px] rounded-[24px] overflow-hidden">
+          <div className="w-full lg:w-[540px] relative h-[400px] lg:h-[529px] rounded-[24px] overflow-hidden">
             <Image
               src={getAssetPath("/images/about/apiImage.png")}
               alt="Tecnología API"

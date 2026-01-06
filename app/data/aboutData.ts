@@ -23,7 +23,7 @@ export const aboutData: AboutData[] = [
     ],
     imageSrc: getAssetPath("/images/about/focusImage.png"),
     imageAlt: "Nuestro enfoque es consultivo y práctico: ",
-    icon: getAssetPath("/icons/about/Icon_service.svg"),
+    icon: getAssetPath("/icons/about/Icon_service2.svg"),
     reverse: true,
   },
 ];
@@ -89,6 +89,13 @@ export const workLinesData: WorkLine[] = [
     description: "Acompañamos a las organizaciones en el uso estratégico de sus datos y en la adopción de prácticas y herramientas que mejoran la gestión y la toma de decisiones.",
     imageSrc: getAssetPath("/icons/about/inteligenciaIcon.svg"),
     url: "/servicios/inteligencia-negocios/",
+  },
+  {
+    id: 4,
+    title: "Diseño y experiencia digital",
+    description: "Creamos experiencias digitales claras, coherentes y funcionales que refuerzan la identidad de la empresa y facilitan la interacción de usuarios, clientes y equipos internos con sus plataformas.",
+    imageSrc: getAssetPath("/icons/about/disenoIcon.svg"),
+    url: "/servicios/diseno/",
   },
 ];
 

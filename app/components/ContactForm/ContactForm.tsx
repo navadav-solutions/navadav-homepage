@@ -71,12 +71,11 @@ const ContactForm = () => {
                 </div>
               </form>
               {/* Imagen/Productos - Lado Derecho */}
-              <div className="rounded-[50px] relative overflow-hidden">
+              <div className="rounded-[50px] w-full lg:w-[420px] relative h-[400px] lg:h-[537px]  relative overflow-hidden">
                 <Image
                   src={getAssetPath("/images/misc/form.png")}
                   alt="Contact Products"
-                  width={400}
-                  height={400}
+                  fill
                   className="object-cover w-full h-full"
                 />
               </div>
