@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "");
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
 
   if (state.succeeded) {
     return (
