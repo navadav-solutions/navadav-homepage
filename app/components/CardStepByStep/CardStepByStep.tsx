@@ -14,7 +14,7 @@ const CardStepByStep = ({
   url?: string;
 }) => {
   return (
-    <section className="flex flex-col items-start justify-start w-full rounded-[24px] p-[36px] bg-white"
+    <section className="flex flex-col items-start justify-start w-full rounded-[24px] p-[36px] lg:gap-0 gap-4 bg-white"
     style={{
       background: isWorkLineSection ? "linear-gradient(207deg, #FFF 39.37%, #F2F3FB 100.34%)" : "bg-white",
     }}
@@ -29,7 +29,7 @@ const CardStepByStep = ({
         />
       </div>
       <div className="flex flex-col items-start justify-start w-[100%]">
-        <span className={`text-[24px] font-[700] text-[#2B2B40] text-start lg:text-left ${isWorkLineSection ? "lg:text-[32px] w-[90%]" : "lg:text-[40px] "}`}>
+        <span className={`text-[24px] font-[700] text-[#2B2B40] text-start lg:text-left ${isWorkLineSection ? "lg:text-[32px] w-[100%]" : "lg:text-[40px] "}`}>
           {title}
         </span>
         <p className="lg:text-[24px] text-[18px] font-[400] text-[#585967] text-start lg:w-[90%] w-[100%]">

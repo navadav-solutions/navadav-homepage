@@ -83,7 +83,7 @@ const AboutUs = () => {
 
       </section>
 
-      <section className="w-[90%] mx-auto flex flex-row  gap-10 justify-between items-start">
+      <section className="w-[90%] mx-auto flex flex-col lg:flex-row  gap-10 justify-between items-start">
         <div className="w-full max-w-[540px] h-[636px] mx-auto rounded-[62px] relative">
           <div className="w-full h-full rounded-[62px] overflow-hidden">
             <Image
@@ -96,7 +96,7 @@ const AboutUs = () => {
           </div>
           
           {/* Icono abstracto en la esquina superior izquierda de la foto */}
-          <div className="absolute -top-12 -left-15 w-16 h-16 lg:w-[153px] lg:h-[146px] z-20">
+          <div className="absolute -top-12 -left-15 w-[153px] h-[153px] lg:w-[153px] lg:h-[146px] z-20">
             <Image
               src={getAssetPath("/images/about/abstracto.png")}
               alt="Elemento abstracto"
@@ -120,7 +120,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <section className="w-full text-center flex flex-col justify-center items-start">
+        <section className="w-full text-center flex flex-col justify-center mt-20 lg:mt-0 items-start">
           <h2 className="text-[32px] lg:text-[48px] font-[600] text-[#000] mb-6">
             Nuestro fundador
           </h2>
@@ -139,8 +139,8 @@ const AboutUs = () => {
       </section>
 
 
-      <section className="w-[90%] mx-auto mt-60 mb-60">
-        <div className="flex flex-col lg:flex-row-reverse gap-10 items-stretch overflow-hidden">
+      <section className="w-[90%] mx-auto mt-60 lg:mb-60 mb-10">
+        <div className="flex flex-col lg:flex-row-reverse gap-2 lg:gap-10 items-stretch overflow-hidden">
           {/* Imagen */}
           <div className="w-full  relative w-[540px] h-[529px] rounded-[24px] overflow-hidden">
             <Image
@@ -152,7 +152,7 @@ const AboutUs = () => {
             />
           </div>
           {/* Texto */}
-          <div className="w-full flex flex-col justify-start p-8 lg:p-12 lg:pt-0 lg:pr-0 text-left">
+          <div className="w-full flex flex-col justify-start p-4 lg:p-12 lg:pt-0 lg:pr-0 text-left">
             <h2 className="text-[28px] lg:text-[48px] font-[600] text-[#000] mb-4">
               Como Trabajamos
             </h2>
@@ -169,7 +169,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="w-[90%] mx-auto py-16 mt-60 text-center flex flex-col justify-center items-center relative">
+      <section className="w-[90%] mx-auto lg:py-16 py-10 pb-0 lg:mt-60 mt-10 text-center flex flex-col justify-center items-center relative">
         <Image
           src={getAssetPath("/images/hero/elemento-abstracto.png")}
           alt="Elemento Abstracto"
@@ -182,7 +182,7 @@ const AboutUs = () => {
         </h2>
       </section>
 
-      <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center relative">
+      <section className="w-[80%] mx-auto lg:py-16 py-10 pb-0 text-center flex flex-col justify-center items-center relative">
         <Image
           src={getAssetPath("/images/about/circleImage.png")}
           alt="Elemento Abstracto"
@@ -245,7 +245,7 @@ const AboutUs = () => {
                       <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-600 leading-relaxed w-[80%]">
+                      <p className="text-base lg:text-lg text-gray-600 leading-relaxed w-[90%]">
                         {feature.description}
                       </p>
                     </div>
