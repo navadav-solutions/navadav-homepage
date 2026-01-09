@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 w-[80%] mx-auto py-8">
+        <div className="absolute bottom-0 left-0 right-0 w-full mx-auto py-8">
           <BrandList />
         </div>
       </section>
