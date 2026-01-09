@@ -56,7 +56,7 @@ const Navbar = () => {
       >
         <div className="relative w-[200px] h-[auto] z-10 relative">
           <Image
-            src={getAssetPath("/logos/final.svg")}
+            src={getAssetPath("/logos/main.svg")}
             alt="logo"
             width={200}
             height={0}

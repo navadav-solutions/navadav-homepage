@@ -13,7 +13,7 @@ const Footer = () => {
     >
       <div className="w-[90%] mx-auto text-white py-24">
         <Image
-          src={getAssetPath("/logos/final.svg")}
+          src={getAssetPath("/logos/main.svg")}
           alt="logo"
           width={200}
           height={0}
