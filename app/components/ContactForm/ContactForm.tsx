@@ -69,6 +69,76 @@ const ContactForm = () => {
                     <ValidationError prefix="Email" field="email" className="text-red-500 text-sm font-semibold" errors={state.errors} />
                   </div>
                 </div>
+                <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="flex-1">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-0">
+                      Empresa
+                    </label>
+                    <input
+                      id="company"
+                      type="text"
+                      name="company"
+                      className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 text-gray-800"
+                      placeholder=""
+                    />
+                    <ValidationError prefix="Company" field="company" className="text-red-500 text-sm font-semibold" errors={state.errors} />
+                  </div>
+                  <div className="flex-1">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                      Teléfono
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      inputMode="tel"
+                      pattern="\+?[0-9]*"
+                      className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 text-gray-800"
+                      placeholder=""
+                      onKeyDown={(e) => {
+                        const input = e.currentTarget;
+                        const value = input.value;
+                        const isNumber = /[0-9]/.test(e.key);
+                        const isPlus = e.key === '+';
+                        const isControlKey = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'Enter', 'Home', 'End'].includes(e.key);
+                        
+                        // Permitir + solo al inicio
+                        if (isPlus && value.length === 0) {
+                          return; // Permitir el +
+                        }
+                        
+                        // Permitir números siempre
+                        if (isNumber) {
+                          return; // Permitir números
+                        }
+                        
+                        // Permitir teclas de control
+                        if (isControlKey) {
+                          return; // Permitir teclas de control
+                        }
+                        
+                        // Permitir Ctrl/Cmd + A, C, V, X para copiar/pegar/seleccionar
+                        if (e.ctrlKey || e.metaKey) {
+                          return;
+                        }
+                        
+                        // Bloquear todo lo demás
+                        e.preventDefault();
+                      }}
+                      onChange={(e) => {
+                        let value = e.target.value;
+                        // Permitir + solo al inicio, luego solo números
+                        if (value.startsWith('+')) {
+                          value = '+' + value.slice(1).replace(/[^0-9]/g, '');
+                        } else {
+                          value = value.replace(/[^0-9]/g, '');
+                        }
+                        e.target.value = value;
+                      }}
+                    />
+                    <ValidationError prefix="Phone" field="phone" className="text-red-500 text-sm font-semibold" errors={state.errors} />
+                  </div>
+                </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                     Cuéntanos brevemente qué te gustaría mejorar o evolucionar.
@@ -76,14 +146,14 @@ const ContactForm = () => {
                   <textarea
                     id="message"
                     name="message"
-                    rows={4}
-                    className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 text-gray-800 resize-none"
+                    rows={3}
+                    className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-800 resize-none"
                     placeholder=""
                     required
                   />
                   <ValidationError prefix="Message" field="message" className="text-red-500 text-sm font-semibold"  errors={state.errors} />
                 </div>
-                <div className="flex lg:flex-row flex-col items-center justify-between gap-4 lg:mt-20 mt-6">
+                <div className="flex lg:flex-row flex-col items-center justify-between gap-4 lg:mt-10 mt-6">
                   <p className="text-[18px] font-[500] lg:font-[400] text-[#2A1A45] lg:text-gray-500 lg:w-[60%] w-[100%] text-left">
                     Al enviar este formulario confirmo que he leído y acepto la
                     Política de Privacidad.
