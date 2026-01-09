@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`w-[100%] font-semibold text-[var(--primary-color-text)] mx-auto flex justify-between items-center px-4 fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
+        className={`w-[100%] font-semibold text-[var(--primary-color-text)] py-6 mx-auto flex justify-between items-center px-4 fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
           isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : ""
         }`}
       >
