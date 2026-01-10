@@ -49,3 +49,42 @@ body {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Estilos personalizados para react-phone-input-2 */
+.phone-input-custom:focus {
+  border-bottom-color: #3b82f6 !important;
+}
+
+.phone-input-custom:focus + .flag-dropdown {
+  border-bottom-color: #3b82f6 !important;
+}
+
+.flag-dropdown {
+  border: none !important;
+  border-bottom: 2px solid #d1d5db !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.flag-dropdown.open {
+  border-bottom-color: #3b82f6 !important;
+}
+
+.flag-dropdown.open .selected-flag {
+  background: transparent !important;
+}
+
+.selected-flag {
+  background: transparent !important;
+  border: none !important;
+  padding: 8px 4px 8px 0 !important;
+}
+
+.selected-flag:focus {
+  outline: none !important;
+}
+
+.country-list {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}

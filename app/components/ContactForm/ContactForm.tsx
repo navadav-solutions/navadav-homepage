@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { getAssetPath } from "@/app/utils/assets";
 import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
+  const [phone, setPhone] = useState("");
 
   if (state.succeeded) {
     return (
@@ -84,57 +88,40 @@ const ContactForm = () => {
                     <ValidationError prefix="Company" field="company" className="text-red-500 text-sm font-semibold" errors={state.errors} />
                   </div>
                   <div className="flex-1">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Teléfono
                     </label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      inputMode="tel"
-                      pattern="\+?[0-9]*"
-                      className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 text-gray-800"
-                      placeholder=""
-                      onKeyDown={(e) => {
-                        const input = e.currentTarget;
-                        const value = input.value;
-                        const isNumber = /[0-9]/.test(e.key);
-                        const isPlus = e.key === '+';
-                        const isControlKey = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'Enter', 'Home', 'End'].includes(e.key);
-                        
-                        // Permitir + solo al inicio
-                        if (isPlus && value.length === 0) {
-                          return; // Permitir el +
-                        }
-                        
-                        // Permitir números siempre
-                        if (isNumber) {
-                          return; // Permitir números
-                        }
-                        
-                        // Permitir teclas de control
-                        if (isControlKey) {
-                          return; // Permitir teclas de control
-                        }
-                        
-                        // Permitir Ctrl/Cmd + A, C, V, X para copiar/pegar/seleccionar
-                        if (e.ctrlKey || e.metaKey) {
-                          return;
-                        }
-                        
-                        // Bloquear todo lo demás
-                        e.preventDefault();
+                    <PhoneInput
+                      country="us"
+                      value={phone}
+                      onChange={(value) => setPhone(value)}
+                      inputProps={{
+                        name: "phone",
+                        id: "phone",
+                        required: false,
                       }}
-                      onChange={(e) => {
-                        let value = e.target.value;
-                        // Permitir + solo al inicio, luego solo números
-                        if (value.startsWith('+')) {
-                          value = '+' + value.slice(1).replace(/[^0-9]/g, '');
-                        } else {
-                          value = value.replace(/[^0-9]/g, '');
-                        }
-                        e.target.value = value;
+                      containerStyle={{
+                        width: "100%",
                       }}
+                      inputStyle={{
+                        width: "100%",
+                        border: "none",
+                        borderBottom: "2px solid #d1d5db",
+                        borderRadius: "0",
+                        padding: "8px 0 8px 50px",
+                        fontSize: "16px",
+                        color: "#1f2937",
+                        outline: "none",
+                        background: "transparent",
+                      }}
+                      buttonStyle={{
+                        border: "none",
+                        borderBottom: "2px solid #d1d5db",
+                        borderRadius: "0",
+                        background: "transparent",
+                        padding: "8px 4px 8px 0",
+                      }}
+                      inputClass="phone-input-custom"
                     />
                     <ValidationError prefix="Phone" field="phone" className="text-red-500 text-sm font-semibold" errors={state.errors} />
                   </div>
