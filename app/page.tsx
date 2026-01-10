@@ -18,19 +18,19 @@ export default function Home() {
   return (
     <Layout>
       <section
-        className="w-full h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden"
+        className="w-full min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden flex flex-col"
         style={{
           backgroundImage: `url(${getAssetPath("/images/misc/ejemplo1.png")})`,
         }}
       >
-        <div className="w-full lg:w-[80%] mx-auto h-full flex flex-col items-center justify-center relative z-10">
+        <div className="w-full lg:w-[80%] mx-auto flex-1 flex flex-col items-center justify-center relative z-10 pt-20">
           <div className="flex flex-col items-center justify-center text-center">
             <MainTitle />
             <ConversemosButton isVisible />
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 w-full mx-auto py-8">
+        <div className="w-full mx-auto py-8 relative z-10">
           <BrandList />
         </div>
       </section>
