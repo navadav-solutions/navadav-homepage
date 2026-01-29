@@ -4,15 +4,11 @@ import Layout from "@/app/layout/Layout";
 import { getAssetPath } from "@/app/utils/assets";
 import CardStepByStep from "@/app/components/CardStepByStep/CardStepByStep";
 import CardServices from "@/app/components/CardServices/CardServices";
-import TestimonialCard from "@/app/components/TestimonialCard/TestimonialCard";
 import { services } from "@/app/data/listServices";
 import { stepByStep } from "@/app/data/stepByStep";
-import { listTestimonials } from "@/app/data/listTestimonials";
-import CustomerHero from "@/app/components/CustomerHero/CustomerHero";
 import TitleSection from "@/app/components/TitleSection/TitleSection";
 import MainTitle from "@/app/components/MainTitle/MainTitle";
 import ConversemosButton from "@/app/components/AgendaButton/AgendaButton";
-import BrandList from "./components/BrandList/BrandList";
 
 export default function Home() {
   return (
@@ -30,13 +26,16 @@ export default function Home() {
           </div>
         </div>
 
+        {/*
+        //Temporalmente oculto hasta tener más marcas que mostrar
         <div className="w-full mx-auto py-8 relative z-10">
           <BrandList />
-        </div>
+        </div> */}
       </section>
 
-
-      <CustomerHero />
+      {/* 
+      //temporalmente oculto hasta tener más testimonios
+      <CustomerHero /> */}
 
       <section className="w-[80%] mx-auto py-16 text-center flex flex-col justify-center items-center">
         <TitleSection
@@ -107,6 +106,8 @@ export default function Home() {
         />
       </div>
 
+      {/* 
+      //Temporalmente oculto hasta tener más testimonios
       <section className="w-[80%] mx-auto py-[45px] lg:text-center text-start flex flex-row justify-between items-center">
         <h2 className="text-[18px] lg:text-[56px] font-bold text-[#2B2B40] lg:mb-6 mb-0">
           Historias que Transforman
@@ -125,7 +126,7 @@ export default function Home() {
             date={testimonial.date}
           />
         ))}
-      </section>
+      </section> */}
       <ContactForm />
     </Layout>
   );
