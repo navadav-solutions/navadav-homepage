@@ -70,12 +70,12 @@ export const services = [
 
   {
     title: "Automatización e Inteligencia Artificial",
-    imageSrc: getAssetPath("/images/services/desarrollo.png"),
+    imageSrc: getAssetPath("/images/services/automatizacion.png"),
     listServices: listServicesAutomation,
   },
   {
     title: "Inteligencia de Negocio",
-    imageSrc: getAssetPath("/images/services/desarrollo.png"),
+    imageSrc: getAssetPath("/images/services/inteligencia-negocio.png"),
     listServices: listServicesBusinessIntelligence,
   },
   {
