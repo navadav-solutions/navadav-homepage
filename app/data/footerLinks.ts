@@ -11,6 +11,10 @@ export const footerLinks = [
     title: "Contactanos",
     link: "#contact-form",
   },
+  {
+    title: "Política de privacidad",
+    link: "/privacy-policy",
+  },
 ];
 
 export const footerSocialLinks = [

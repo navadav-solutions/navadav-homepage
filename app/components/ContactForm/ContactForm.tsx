@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { getAssetPath } from "@/app/utils/assets";
 import Image from "next/image";
+import Link from "next/link";
 import { useForm, ValidationError } from "@formspree/react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -16,9 +17,9 @@ const ContactForm = () => {
       <div id="contact-form">
         <section className="w-[80%] mx-auto py-16 lg:mb-32 mb-8">
           <div className="flex gap-8">
-            <div className="w-full bg-white rounded-[24px] md:p-8 p-4 md:py-8 py-8">
+            <div className="w-full bg-white rounded-3xl md:p-8 p-4 md:py-8 py-8">
               <div className="flex flex-col items-center justify-center min-h-[400px]">
-                <h2 className="text-[32px] lg:text-[42px] font-[700] text-gray-800 mb-4 text-center">
+                <h2 className="text-[32px] lg:text-[42px] font-boldtext-gray-800 mb-4 text-center">
                   ¡Gracias por contactarnos!
                 </h2>
                 <p className="text-lg text-gray-600 text-center">
@@ -37,15 +38,22 @@ const ContactForm = () => {
       <section className="w-[80%] mx-auto py-16 lg:mb-32 mb-8">
         <div className="flex gap-8">
           {/* Formulario - Lado Izquierdo */}
-          <div className="w-full bg-white rounded-[24px] md:p-8 p-4 md:py-8 py-8">
+          <div className="w-full bg-white rounded-3xl md:p-8 p-4 md:py-8 py-8">
             <div className="flex flex-col lg:flex-row justify-between gap-8">
-              <form onSubmit={handleSubmit}  method="POST" className="flex flex-col  gap-6 lg:w-[50%] w-[100%]">
-                <h2 className="text-[32px] lg:text-[42px] font-[700] text-gray-800 mb-8 lg:text-left text-center">
+              <form
+                onSubmit={handleSubmit}
+                method="POST"
+                className="flex flex-col  gap-6 lg:w-[50%] w-full"
+              >
+                <h2 className="text-[32px] lg:text-[42px] font-bold text-gray-800 mb-8 lg:text-left text-center">
                   Conversemos sobre cómo evolucionar tu negocio
                 </h2>
                 <div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex-1">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-0">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-0"
+                    >
                       Nombre
                     </label>
                     <input
@@ -56,10 +64,18 @@ const ContactForm = () => {
                       placeholder=""
                       required
                     />
-                    <ValidationError prefix="Name" field="name" className="text-red-500 text-sm font-semibold"  errors={state.errors} />
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      className="text-red-500 text-sm font-semibold"
+                      errors={state.errors}
+                    />
                   </div>
                   <div className="flex-1">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       Correo electrónico
                     </label>
                     <input
@@ -70,12 +86,20 @@ const ContactForm = () => {
                       placeholder=""
                       required
                     />
-                    <ValidationError prefix="Email" field="email" className="text-red-500 text-sm font-semibold" errors={state.errors} />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      className="text-red-500 text-sm font-semibold"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex-1">
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-0">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-700 mb-0"
+                    >
                       Empresa
                     </label>
                     <input
@@ -85,10 +109,18 @@ const ContactForm = () => {
                       className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 text-gray-800"
                       placeholder=""
                     />
-                    <ValidationError prefix="Company" field="company" className="text-red-500 text-sm font-semibold" errors={state.errors} />
+                    <ValidationError
+                      prefix="Company"
+                      field="company"
+                      className="text-red-500 text-sm font-semibold"
+                      errors={state.errors}
+                    />
                   </div>
                   <div className="flex-1">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Teléfono
                     </label>
                     <PhoneInput
@@ -123,11 +155,19 @@ const ContactForm = () => {
                       }}
                       inputClass="phone-input-custom"
                     />
-                    <ValidationError prefix="Phone" field="phone" className="text-red-500 text-sm font-semibold" errors={state.errors} />
+                    <ValidationError
+                      prefix="Phone"
+                      field="phone"
+                      className="text-red-500 text-sm font-semibold"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Cuéntanos brevemente qué te gustaría mejorar o evolucionar.
                   </label>
                   <textarea
@@ -138,17 +178,28 @@ const ContactForm = () => {
                     placeholder=""
                     required
                   />
-                  <ValidationError prefix="Message" field="message" className="text-red-500 text-sm font-semibold"  errors={state.errors} />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    className="text-red-500 text-sm font-semibold"
+                    errors={state.errors}
+                  />
                 </div>
                 <div className="flex lg:flex-row flex-col items-center justify-between gap-4 lg:mt-10 mt-6">
-                  <p className="text-[18px] font-[500] lg:font-[400] text-[#2A1A45] lg:text-gray-500 lg:w-[60%] w-[100%] text-left">
-                    Al enviar este formulario confirmo que he leído y acepto la
-                    Política de Privacidad.
+                  <p className="text-[18px] font-medium lg:font-normal text-[#2A1A45] lg:text-gray-500 lg:w-[60%] w-full text-left">
+                    Al enviar este formulario confirmo que he leído y acepto la{" "}
+                    <Link
+                      href="/politica-de-privacidad"
+                      className="underline font-semibold text-[#0743D7]"
+                    >
+                      Política de Privacidad
+                    </Link>
+                    .
                   </p>
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="lg:w-fit w-full flex justify-center items-center text-white px-[36px] py-[10px] rounded-[16px] text-lg font-semibold shadow-lg flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="lg:w-fit w-full flex justify-center items-center text-white px-9 py-2.5 rounded-2xl text-lg font-semibold shadow-lg gap-2 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                     style={{
                       background:
                         "radial-gradient(85.16% 87.63% at 50% 50%, #0743D7 0%, #2D69FD 100%)",
@@ -170,7 +221,7 @@ const ContactForm = () => {
                 <ValidationError errors={state.errors} />
               </form>
               {/* Imagen/Productos - Lado Derecho */}
-              <div className="rounded-[50px] w-full lg:w-[420px] relative h-[400px] lg:h-[537px]  relative overflow-hidden">
+              <div className="rounded-[50px] w-full lg:w-[420px] relative h-[400px] lg:h-[537px] overflow-hidden">
                 <Image
                   src={getAssetPath("/images/misc/form.png")}
                   alt="Contact Products"
